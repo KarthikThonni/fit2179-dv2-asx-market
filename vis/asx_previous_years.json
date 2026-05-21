@@ -1,0 +1,190 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "ASX 200 yearly capital returns from 2015 to 2025 with average return line.",
+  "width": 760,
+  "height": 380,
+  "data": {
+    "url": "data/asx_yearly_returns.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum['Capital Return of ASX 200 (%)']) / 100",
+      "as": "returnRate"
+    },
+    {
+      "calculate": "format(datum.returnRate, '.1%')",
+      "as": "returnLabel"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "labelPadding": 4
+          }
+        },
+        "y": {
+          "field": "returnRate",
+          "type": "quantitative",
+          "title": "Capital return",
+          "scale": {
+            "domain": [-0.1, 0.25]
+          },
+          "axis": {
+            "format": ".0%",
+            "gridColor": {
+              "condition": {
+                "test": "datum.value === 0",
+                "value": "black"
+              },
+              "value": "#ddd"
+            }
+          }
+        },
+        "color": {
+          "field": "returnRate",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.05, 0, 0.25],
+            "range": ["#c0392b", "#d9d9d9", "#2e8b57"]
+          },
+          "legend": {
+            "title": "Return",
+            "orient": "top",
+            "offset": 10,
+            "format": ".0%"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "returnRate",
+            "type": "quantitative",
+            "title": "Capital return",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [6, 4],
+        "strokeWidth": 2,
+        "color": "#111111"
+      },
+      "encoding": {
+        "y": {
+          "aggregate": "average",
+          "field": "returnRate",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 8,
+        "dy": -6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#111111"
+      },
+      "encoding": {
+        "x": {
+          "datum": "2025"
+        },
+        "y": {
+          "aggregate": "average",
+          "field": "returnRate",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "Average"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.returnRate >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -5,
+        "fontSize": 11,
+        "color": "#111111"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "returnRate",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "returnLabel"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.returnRate < 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "dy": 5,
+        "fontSize": 11,
+        "color": "#111111"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "returnRate",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "returnLabel"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}
