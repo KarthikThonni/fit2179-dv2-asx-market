@@ -1,0 +1,199 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Top 10 and bottom 10 ASX 200 companies by one-year return, coloured by sector.",
+  "width": 760,
+  "height": 560,
+  "data": {
+    "url": "data/asx200_companies.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum['1 Year'])",
+      "as": "oneYearReturn"
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "topRank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "oneYearReturn",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "bottomRank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "oneYearReturn",
+          "order": "ascending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.topRank <= 10 || datum.bottomRank <= 10"
+    },
+    {
+      "calculate": "format(datum.oneYearReturn, '.1%')",
+      "as": "returnLabel"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "y": {
+          "field": "Company",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "oneYearReturn",
+            "order": "descending"
+          },
+          "axis": {
+            "labelFontSize": 11,
+            "labelLimit": 240
+          }
+        },
+        "x": {
+          "field": "oneYearReturn",
+          "type": "quantitative",
+          "title": "One-year return",
+          "axis": {
+            "format": ".0%",
+            "grid": true,
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          }
+        },
+        "color": {
+          "field": "Sector",
+          "type": "nominal",
+          "title": "Sector",
+          "scale": {
+            "domain": [
+              "Financials",
+              "Materials",
+              "Industrials",
+              "Consumer Discretionary",
+              "Health Care",
+              "Real Estate",
+              "Energy",
+              "Communication Services",
+              "Consumer Staples",
+              "Utilities",
+              "Information Technology"
+            ],
+            "range": [
+              "#4e79a7",
+              "#f28e2b",
+              "#e15759",
+              "#76b7b2",
+              "#59a14f",
+              "#edc948",
+              "#b07aa1",
+              "#ff9da7",
+              "#9c755f",
+              "#bab0ab",
+              "#6f4e7c"
+            ]
+          },
+          "legend": {
+            "title": "Sector",
+            "orient": "right",
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "symbolSize": 140,
+            "rowPadding": 6
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Company",
+            "type": "nominal",
+            "title": "Company"
+          },
+          {
+            "field": "Sector",
+            "type": "nominal",
+            "title": "Sector"
+          },
+          {
+            "field": "oneYearReturn",
+            "type": "quantitative",
+            "title": "One-year return",
+            "format": ".1%"
+          },
+          {
+            "field": "Mkt Cap",
+            "type": "nominal",
+            "title": "Market cap"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.oneYearReturn < 0 ? 'right' : 'left'"
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.oneYearReturn < 0 ? -5 : 5"
+        },
+        "fontSize": 10,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "Company",
+          "type": "nominal",
+          "sort": {
+            "field": "oneYearReturn",
+            "order": "descending"
+          }
+        },
+        "x": {
+          "field": "oneYearReturn",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "returnLabel"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.oneYearReturn < 0",
+            "value": "#c0392b"
+          },
+          "value": "#2e8b57"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}
