@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "One-year performance comparison of major stock indexes from countries with the largest equity markets.",
+  "width": 950,
+  "height": {
+    "step": 36
+  },
+  "data": {
+    "url": "data/country_indexes.csv"
+  },
+  "transform": [
+    {
+      "filter": "indexof(['S&P 500 (United States)', 'Shanghai (China)', 'Nikkei 225 (Japan)', 'FTSE 100 (United Kingdom)', 'S&P/TSX (Canada)', 'Nifty 50 (India)', 'KOSPI (South Korea)', 'Taiwan Weighted (Taiwan)', 'CAC 40 (France)', 'SMI (Switzerland)', 'DAX (Germany)', 'Tadawul All Share (Saudi Arabia)', 'S&P/ASX 200 (Australia)', 'AEX (Netherlands)', 'IBEX 35 (Spain)'], datum.Name) >= 0"
+    },
+    {
+      "calculate": "toNumber(datum['1 Year'])",
+      "as": "oneYearReturn"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+  },
+  "encoding": {
+    "y": {
+      "field": "Name",
+      "type": "nominal",
+      "sort": {
+        "field": "oneYearReturn",
+        "op": "max",
+        "order": "descending"
+      },
+      "title": null,
+      "axis": {
+        "labelFontSize": 13,
+        "labelLimit": 260,
+        "labelColor": {
+          "expr": "datum.value == 'S&P/ASX 200 (Australia)' ? '#f2c94c' : '#1f1f1f'"
+        }
+      }
+    },
+    "x": {
+      "field": "oneYearReturn",
+      "type": "quantitative",
+      "title": "One-year return",
+      "axis": {
+        "format": ".0%",
+        "labelFontSize": 12,
+        "titleFontSize": 13,
+        "grid": true
+      }
+    },
+    "color": {
+      "field": "oneYearReturn",
+      "type": "quantitative",
+      "scale": {
+        "domain": [-0.1, 0, 2],
+        "range": ["#c0392b", "#d9d9d9", "#2e8b57"]
+      },
+      "legend": {
+        "title": "One-year return"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Name",
+        "type": "nominal",
+        "title": "Index"
+      },
+      {
+        "field": "oneYearReturn",
+        "type": "quantitative",
+        "title": "One-year return",
+        "format": ".1%"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

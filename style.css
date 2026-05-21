@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 50px 8%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f6f2;
+  color: #1f1f1f;
+}
+
+header {
+  margin-bottom: 35px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 0;
+}
+
+p {
+  font-size: 18px;
+  max-width: 850px;
+  line-height: 1.6;
+}
+
+.chart-section {
+  background-color: white;
+  padding: 28px;
+  border-radius: 14px;
+  margin-bottom: 35px;
+}
+
+.chart {
+  margin-top: 20px;
+}
