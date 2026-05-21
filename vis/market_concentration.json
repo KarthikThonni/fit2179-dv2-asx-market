@@ -1,0 +1,206 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "ASX 200 market concentration by company market capitalisation.",
+  "width": 760,
+  "height": 420,
+  "data": {
+    "url": "data/asx200_companies.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(replace(replace(datum['Mkt Cap'], '$', ''), 'B', ''))",
+      "as": "marketCapB"
+    },
+    {
+      "filter": "isValid(datum.marketCapB)"
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "companyRank"
+        },
+        {
+          "op": "sum",
+          "field": "marketCapB",
+          "as": "cumulativeMarketCapB"
+        }
+      ],
+      "sort": [
+        {
+          "field": "marketCapB",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "marketCapB",
+          "as": "totalMarketCapB"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.cumulativeMarketCapB / datum.totalMarketCapB",
+      "as": "cumulativeShare"
+    },
+    {
+      "filter": "datum.companyRank <= 50"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "opacity": 0.85
+      },
+      "encoding": {
+        "x": {
+          "field": "companyRank",
+          "type": "ordinal",
+          "title": "Company rank by market cap",
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 10,
+            "titleFontSize": 13
+          }
+        },
+        "y": {
+          "field": "marketCapB",
+          "type": "quantitative",
+          "title": "Market cap ($B)",
+          "axis": {
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "grid": true
+          }
+        },
+        "color": {
+          "field": "Sector",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Financials",
+              "Materials",
+              "Industrials",
+              "Consumer Discretionary",
+              "Health Care",
+              "Real Estate",
+              "Energy",
+              "Communication Services",
+              "Consumer Staples",
+              "Utilities",
+              "Information Technology"
+            ],
+            "range": [
+              "#4e79a7",
+              "#f28e2b",
+              "#e15759",
+              "#76b7b2",
+              "#59a14f",
+              "#edc948",
+              "#b07aa1",
+              "#ff9da7",
+              "#9c755f",
+              "#bab0ab",
+              "#6f4e7c"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "companyRank",
+            "type": "ordinal",
+            "title": "Rank"
+          },
+          {
+            "field": "Company",
+            "type": "nominal",
+            "title": "Company"
+          },
+          {
+            "field": "Sector",
+            "type": "nominal",
+            "title": "Sector"
+          },
+          {
+            "field": "marketCapB",
+            "type": "quantitative",
+            "title": "Market cap ($B)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#d62828",
+        "strokeWidth": 3,
+        "point": {
+          "filled": true,
+          "size": 45,
+          "color": "#d62828"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "companyRank",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "cumulativeShare",
+          "type": "quantitative",
+          "title": "Cumulative share",
+          "scale": {
+            "domain": [0, 1]
+          },
+          "axis": {
+            "orient": "right",
+            "format": ".0%",
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "labelPadding": 8,
+            "titlePadding": 18,
+            "grid": false
+          }
+        },
+        "tooltip": [
+          {
+            "field": "companyRank",
+            "type": "ordinal",
+            "title": "Rank"
+          },
+          {
+            "field": "Company",
+            "type": "nominal",
+            "title": "Company"
+          },
+          {
+            "field": "cumulativeShare",
+            "type": "quantitative",
+            "title": "Cumulative share",
+            "format": ".1%"
+          }
+        ]
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

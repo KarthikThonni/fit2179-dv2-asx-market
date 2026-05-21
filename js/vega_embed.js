@@ -9,3 +9,5 @@ vegaEmbed("#sector_growth", "vis/sector_growth.json").catch(console.error);
 vegaEmbed("#best_worst_companies", "vis/best_worst_companies.json").catch(console.error);
 
 vegaEmbed("#market_cap_vs_growth", "vis/market_cap_vs_growth.json").catch(console.error);
+
+vegaEmbed("#market_concentration", "vis/market_concentration.json").catch(console.error);
