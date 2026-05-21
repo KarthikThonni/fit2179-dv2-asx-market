@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Distribution of one-year returns for ASX 200 companies by sector, excluding extreme outliers for readability.",
+  "width": 760,
+  "height": 470,
+  "data": {
+    "url": "data/asx200_companies.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum['1 Year'])",
+      "as": "oneYearReturn"
+    },
+    {
+      "filter": "datum.oneYearReturn >= -1 && datum.oneYearReturn <= 3"
+    }
+  ],
+  "mark": {
+    "type": "boxplot",
+    "extent": 1.5,
+    "size": 30
+  },
+  "encoding": {
+    "x": {
+      "field": "oneYearReturn",
+      "type": "quantitative",
+      "title": "One-year return",
+      "scale": {
+        "domain": [-1, 3]
+      },
+      "axis": {
+        "format": ".0%",
+        "grid": true,
+        "tickCount": 7,
+        "labelFontSize": 12,
+        "titleFontSize": 13
+      }
+    },
+    "y": {
+      "field": "Sector",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Financials",
+        "Materials",
+        "Industrials",
+        "Consumer Discretionary",
+        "Health Care",
+        "Real Estate",
+        "Energy",
+        "Communication Services",
+        "Consumer Staples",
+        "Utilities",
+        "Information Technology"
+      ],
+      "scale": {
+        "paddingInner": 0.45,
+        "paddingOuter": 0.55
+      },
+      "axis": {
+        "labelFontSize": 12,
+        "labelLimit": 220
+      }
+    },
+    "color": {
+      "field": "Sector",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": [
+          "Financials",
+          "Materials",
+          "Industrials",
+          "Consumer Discretionary",
+          "Health Care",
+          "Real Estate",
+          "Energy",
+          "Communication Services",
+          "Consumer Staples",
+          "Utilities",
+          "Information Technology"
+        ],
+        "range": [
+          "#4e79a7",
+          "#f28e2b",
+          "#e15759",
+          "#76b7b2",
+          "#59a14f",
+          "#edc948",
+          "#b07aa1",
+          "#ff9da7",
+          "#9c755f",
+          "#bab0ab",
+          "#6f4e7c"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Company",
+        "type": "nominal",
+        "title": "Company"
+      },
+      {
+        "field": "Sector",
+        "type": "nominal",
+        "title": "Sector"
+      },
+      {
+        "field": "oneYearReturn",
+        "type": "quantitative",
+        "title": "One-year return",
+        "format": ".1%"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

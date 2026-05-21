@@ -35,7 +35,10 @@
         "labelFontSize": 13,
         "labelLimit": 260,
         "labelColor": {
-          "expr": "datum.value == 'S&P/ASX 200 (Australia)' ? '#f2c94c' : '#1f1f1f'"
+          "expr": "datum.value == 'S&P/ASX 200 (Australia)' ? '#d62828' : '#1f1f1f'"
+        },
+        "labelFontWeight": {
+          "expr": "datum.value == 'S&P/ASX 200 (Australia)' ? 'bold' : 'normal'"
         }
       }
     },

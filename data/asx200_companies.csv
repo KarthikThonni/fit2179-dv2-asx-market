@@ -1,201 +1,201 @@
-﻿Rank,Code,Company,Price,1 Day,1 Month,1 Year,Sector,Mkt Cap,MktCapB
-1,BHP,BHP Group Ltd,58.7,-0.0012,0.0497,0.5148,Materials,$298.28B,298.28
-2,CBA,Commonwealth Bank of Australia,162.88,0.0133,-0.0861,-0.0495,Financials,$272.57B,272.57
-3,WBC,Westpac Banking Corporation,36.39,0.019,-0.0841,0.16,Financials,$124.46B,124.46
-4,NAB,National Australia Bank Ltd,37.04,0.0198,-0.1295,0.0054,Financials,$113.62B,113.62
-5,ANZ,ANZ Group Holdings Ltd,35.52,0.0131,-0.0633,0.2507,Financials,$107.06B,107.06
-6,MQG,Macquarie Group Ltd,240.98,0.0187,0.0046,0.1814,Financials,$91.85B,91.85
-7,WES,Wesfarmers Ltd,72.98,0.0241,0.0018,-0.1189,Consumer Discretionary,$82.8B,82.8
-8,FMG,Fortescue Ltd,21.88,-0.0032,0.0306,0.3531,Materials,$67.37B,67.37
-9,RIO,RIO Tinto Ltd,178.66,-0.002,0.0283,0.4956,Materials,$66.43B,66.43
-10,GMG,Goodman Group,30.65,0.0176,0.0432,-0.0307,Real Estate,$62.67B,62.67
-11,TLS,Telstra Group Ltd,5.55,0.0259,0.0413,0.2171,Communication Services,$62.1B,62.1
-12,WDS,Woodside Energy Group Ltd,32.28,0.004,-0.0138,0.4951,Energy,$61.37B,61.37
-13,CSL,CSL Ltd,98.69,0.0257,-0.2803,-0.5918,Health Care,$47.26B,47.26
-14,TCL,Transurban Group,14.47,-0.0007,0.0671,0.0162,Industrials,$45.15B,45.15
-15,WOW,Woolworths Group Ltd,34.21,0.0373,-0.0701,0.0734,Consumer Staples,$41.79B,41.79
-16,QBE,QBE Insurance Group Ltd,23.93,0.0288,0.0509,0.0612,Financials,$35.75B,35.75
-17,SIG,Sigma Healthcare Ltd,2.85,0.0106,0.0179,-0.0273,Health Care,$32.9B,32.9
-18,ALL,Aristocrat Leisure Ltd,51.74,0.0066,0.0542,-0.1743,Consumer Discretionary,$31.2B,31.2
-19,COL,Coles Group Ltd,21.41,0.0269,-0.0501,-0.0111,Consumer Staples,$28.76B,28.76
-20,NST,Northern Star Resources Ltd,19.86,-0.007,-0.1641,0.0519,Materials,$28.4B,28.4
-21,STO,Santos Ltd,8.09,0,0.0575,0.278,Energy,$26.27B,26.27
-22,EVN,Evolution Mining Ltd,11.95,0.0017,-0.12,0.4717,Materials,$24.27B,24.27
-23,BXB,Brambles Ltd,17.53,-0.0057,-0.2171,-0.1925,Industrials,$23.61B,23.61
-24,REA,REA Group Ltd,167.8,0.0194,-0.0392,-0.3348,Communication Services,$22.09B,22.09
-25,ORG,Origin Energy Ltd,11.57,0.0114,-0.0722,0.0461,Utilities,$19.93B,19.93
-26,SUN,Suncorp Group Ltd,17.83,0.0206,0.0683,-0.1319,Financials,$19.31B,19.31
-27,IAG,Insurance Australia Group Ltd,8.17,0.0225,0.0937,-0.0467,Financials,$19.2B,19.2
-28,CPU,Computershare Ltd,33.12,0.0321,0.0757,-0.1983,Industrials,$19.16B,19.16
-29,PLS,PLS Group Ltd,5.92,-0.0133,-0.0199,3.2135,Materials,$19.07B,19.07
-30,SCG,Scentre Group,3.64,0.0139,0.0312,0.0028,Real Estate,$19.01B,19.01
-31,LYC,Lynas Rare EARTHS Ltd,18.12,-0.0428,-0.1246,1.3905,Materials,$18.24B,18.24
-32,S32,SOUTH32 Ltd,4.06,0.0074,-0.1038,0.381,Materials,$18.22B,18.22
-33,SGH,SGH Ltd,40.2,0.0358,-0.015,-0.2333,Industrials,$16.36B,16.36
-34,RMD,Resmed Inc,28.75,0.0199,-0.0879,-0.2604,Health Care,$16.22B,16.22
-35,SOL,Washington H. Soul Pattinson and Company Ltd,42.61,0.017,-0.0153,0.1393,Financials,$16.19B,16.19
-36,FPH,Fisher & Paykel Healthcare Corporation Ltd,27.5,0.0311,-0.1194,-0.1789,Health Care,$16.15B,16.15
-37,APA,APA Group,10.35,0.0068,0.0413,0.253,Utilities,$13.7B,13.7
-38,PME,Pro Medicus Ltd,130.26,0.0378,-0.1242,-0.5319,Health Care,$13.61B,13.61
-39,XRO,Xero Ltd,78.62,0.007,-0.041,-0.5668,Information Technology,$13.41B,13.41
-40,MPL,Medibank Private Ltd,4.79,0.0213,0.0257,0.0063,Financials,$13.19B,13.19
-41,MIN,Mineral Resources Ltd,65.74,0.0256,0.0346,1.7301,Materials,$12.99B,12.99
-42,BSL,Bluescope Steel Ltd,29.6,0.0024,0.0353,0.2677,Materials,$12.97B,12.97
-43,QAN,Qantas Airways Ltd,8.55,0.013,-0.0584,-0.1634,Industrials,$12.94B,12.94
-44,WTC,Wisetech Global Ltd,38.12,-0.0021,-0.1745,-0.6165,Information Technology,$12.81B,12.81
-45,IFT,Infratil Ltd,12.45,0.0057,0.255,0.1712,Financials,$12.44B,12.44
-46,NEM,Newmont Corporation,153.43,0.0175,-0.0186,0.9326,Materials,$12.38B,12.38
-47,TLC,The Lottery Corporation Ltd,5.33,0.0152,-0.0533,0,Consumer Discretionary,$11.86B,11.86
-48,ALQ,Als Ltd,23.32,0.0683,0.0533,0.3168,Industrials,$11.84B,11.84
-49,VCX,Vicinity Centres,2.55,0.0159,0.0039,0.0851,Real Estate,$11.83B,11.83
-50,ASX,ASX Ltd,59.29,0.018,0.0042,-0.1731,Financials,$11.59B,11.59
-51,AIA,Auckland International Airport Ltd,6.75,-0.003,0.003,-0.0741,Industrials,$11.47B,11.47
-52,NXT,NEXTDC Ltd,14.55,-0.0021,0.0469,0.095,Information Technology,$11.05B,11.05
-53,ORI,Orica Ltd,23.07,0.0244,0.1292,0.2423,Materials,$10.69B,10.69
-54,CAR,CAR Group Ltd,26.7,0.0369,0.0179,-0.2606,Communication Services,$10.12B,10.12
-55,SGP,Stockland,3.95,0.0313,-0.0857,-0.2831,Real Estate,$9.6B,9.6
-56,LNW,Light & Wonder Inc,114.58,0.0137,-0.057,-0.1184,Consumer Discretionary,$9.3B,9.3
-57,CHC,Charter Hall Group,19.45,0.0221,-0.0636,0.0818,Real Estate,$9.2B,9.2
-58,GPT,GPT Group,4.77,0.0236,0.0214,0.0192,Real Estate,$9.14B,9.14
-59,SHL,Sonic Healthcare Ltd,18.43,0.0022,-0.1036,-0.3053,Health Care,$9.11B,9.11
-60,TNE,Technology One Ltd,27.8,-0.0293,-0.0983,-0.1581,Information Technology,$9.1B,9.1
-61,YAL,Yancoal Australia Ltd,6.85,0.027,0.0178,0.3591,Energy,$9.05B,9.05
-62,JHX,James Hardie Industries Plc,26.78,0.0292,-0.0449,-0.3017,Materials,$9.02B,9.02
-63,QUB,QUBE Holdings Ltd,5.02,0.002,0.002,0.1812,Industrials,$8.89B,8.89
-64,GGP,Greatland Resources Ltd,13.12,-0.0121,-0.0806,0.9879,Materials,$8.83B,8.83
-65,RHC,Ramsay Health Care Ltd,38.15,0.028,-0.0743,0.0759,Health Care,$8.81B,8.81
-66,ALD,Ampol Ltd,35.69,0.0034,0.0838,0.3514,Energy,$8.51B,8.51
-67,SFR,Sandfire Resources Ltd,18.08,-0.0033,-0.0077,0.7203,Materials,$8.44B,8.44
-68,REH,Reece Ltd,13.71,0.0379,0.0787,-0.1681,Industrials,$8.43B,8.43
-69,TPG,TPG Telecom Ltd,4.22,0.0144,-0.0232,-0.1822,Communication Services,$8.28B,8.28
-70,AFI,Australian Foundation Investment Company Ltd,6.65,0.003,0.0015,-0.0673,Financials,$8.27B,8.27
-71,MCY,Mercury NZ Ltd,5.58,-0.0211,0.0314,-0.0412,Utilities,$7.95B,7.95
-72,JBH,JB Hi-Fi Ltd,69.84,-0.0111,-0.0819,-0.3296,Consumer Discretionary,$7.64B,7.64
-73,AMC,Amcor Plc,52.5,0.0206,-0.0632,-0.2843,Materials,$7.56B,7.56
-74,CDA,Codan Ltd,40.07,0.0083,0.1796,1.364,Information Technology,$7.29B,7.29
-75,PRU,Perseus Mining Ltd,5.38,0.0019,-0.041,0.5824,Materials,$7.23B,7.23
-76,AZJ,Aurizon Holdings Ltd,4.25,0.0192,0.0391,0.4214,Industrials,$7.15B,7.15
-77,LTR,Liontown Ltd,2.23,-0.0388,0.0136,2.2794,Materials,$7.09B,7.09
-78,ALX,Atlas Arteria,4.87,0.0104,0.1405,-0.0706,Industrials,$7.07B,7.07
-79,GMD,Genesis Minerals Ltd,6.08,0.0066,-0.076,0.5432,Materials,$6.95B,6.95
-80,WHC,Whitehaven Coal Ltd,8.15,0.0137,0.0188,0.5177,Energy,$6.72B,6.72
-81,ARG,Argo Investments Ltd,8.84,0.0103,0.0103,-0.0045,Financials,$6.71B,6.71
-82,MGR,Mirvac Group,1.685,0.009,-0.0534,-0.2511,Real Estate,$6.65B,6.65
-83,HUB,HUB24 Ltd,81.01,0.017,-0.1539,0.0077,Financials,$6.62B,6.62
-84,DXS,Dexus,6.08,0.0184,-0.0065,-0.1425,Real Estate,$6.52B,6.52
-85,CGF,Challenger Ltd,9.37,0.0196,0.1155,0.3032,Financials,$6.46B,6.46
-86,DNL,Dyno Nobel Ltd,3.65,0.0111,0.13,0.3826,Materials,$6.41B,6.41
-87,MEZ,Meridian Energy Ltd,4.84,0.0021,0.0431,-0.0987,Utilities,$6.38B,6.38
-88,APE,Eagers Automotive Ltd,22.18,-0.0058,-0.0622,0.2832,Consumer Discretionary,$6.26B,6.26
-89,IGO,IGO Ltd,8.25,-0.0132,-0.1081,0.9928,Materials,$6.25B,6.25
-90,COH,Cochlear Ltd,95.37,0.0198,-0.4339,-0.6482,Health Care,$6.24B,6.24
-91,AGL,AGL Energy Ltd,9.13,0.0144,-0.039,-0.1187,Utilities,$6.14B,6.14
-92,RMS,Ramelius Resources Ltd,3.22,0.0031,-0.1848,0.2628,Materials,$6.11B,6.11
-93,BEN,Bendigo and Adelaide Bank Ltd,10.51,0.0184,-0.054,-0.1071,Financials,$6.09B,6.09
-94,WOR,Worley Ltd,12.41,0.0156,0.0499,-0.0387,Industrials,$6.08B,6.08
-95,CMM,Capricorn Metals Ltd,12.83,-0.0169,0.1051,0.473,Materials,$5.86B,5.86
-96,EDV,Endeavour Group Ltd,3.09,0.0232,-0.0522,-0.2463,Consumer Staples,$5.55B,5.55
-97,NWL,Netwealth Group Ltd,22.2,0.01,-0.1267,-0.2816,Financials,$5.45B,5.45
-98,HVN,Harvey Norman Holdings Ltd,4.37,0,-0.0438,-0.177,Consumer Discretionary,$5.45B,5.45
-99,DOW,Downer Edi Ltd,7.73,0.0211,0.0517,0.259,Industrials,$5.11B,5.11
-100,SEK,Seek Ltd,13.97,0.0341,-0.097,-0.3713,Communication Services,$4.99B,4.99
-101,VNT,Ventia Services Group Ltd,6.03,0.0135,0.1641,0.294,Industrials,$4.95B,4.95
-102,WGX,Westgold Resources Ltd,5.21,0.0136,-0.173,1.0039,Materials,$4.92B,4.92
-103,RRL,Regis Resources Ltd,6.46,0.0094,-0.1444,0.4044,Materials,$4.89B,4.89
-104,CWY,Cleanaway Waste Management Ltd,2.18,0.0093,-0.0563,-0.1956,Industrials,$4.89B,4.89
-105,TLX,TELIX Pharmaceuticals Ltd,14.21,-0.0035,-0.0294,-0.4479,Health Care,$4.82B,4.82
-106,PDN,Paladin Energy Ltd,10.63,0.0241,-0.2689,0.8781,Energy,$4.78B,4.78
-107,NHC,New Hope Corporation Ltd,5.51,0.0357,0.0436,0.5096,Energy,$4.65B,4.65
-108,VAU,Vault Minerals Ltd,4.49,0.0251,-0.0302,0.6064,Materials,$4.65B,4.65
-109,GQG,GQG Partners Inc,1.565,-0.0126,-0.0794,-0.3075,Financials,$4.63B,4.63
-110,SDF,Steadfast Group Ltd,4.15,0.0375,-0.0416,-0.2942,Financials,$4.61B,4.61
-111,CEN,Contact Energy Ltd,8.2,0.0111,0.079,-0.0443,Utilities,$4.41B,4.41
-112,NIC,Nickel Industries Ltd,1.015,0,0.0253,0.5263,Materials,$4.41B,4.41
-113,SGM,Sims Ltd,22.41,0.0173,0.1463,0.4666,Materials,$4.33B,4.33
-114,A2M,The a2 Milk Company Ltd,5.87,0.0103,-0.2142,-0.285,Consumer Staples,$4.26B,4.26
-115,BRG,Breville Group Ltd,29.24,0.0083,0.0156,0.0079,Consumer Discretionary,$4.24B,4.24
-116,BOQ,Bank of Queensland Ltd,6.38,0.0208,-0.1272,-0.1649,Financials,$4.22B,4.22
-117,PDI,Predictive Discovery Ltd,0.835,-0.0774,-0.1022,1.1974,Materials,$4.09B,4.09
-118,AMP,AMP Ltd,1.595,0.029,0.1193,0.2083,Financials,$4.04B,4.04
-119,EMR,Emerald Resources NL,5.87,-0.0034,-0.0941,0.3812,Materials,$3.88B,3.88
-120,BFL,BSP Financial Group Ltd,8.3,-0.0178,0.0247,0.0979,Financials,$3.88B,3.88
-121,VEA,Viva Energy Group Ltd,2.31,0,-0.087,0.1969,Energy,$3.79B,3.79
-122,PNI,Pinnacle Investment Management Group Ltd,15.5,0.0279,-0.093,-0.2238,Financials,$3.74B,3.74
-123,CNU,Chorus Ltd,8.39,0.017,0.0474,0.1069,Communication Services,$3.64B,3.64
-124,XYZ,"Block, Inc",98.6,0.0097,0.02,0.1148,Financials,$3.63B,3.63
-125,ANN,Ansell Ltd,25.45,0.016,-0.0619,-0.2029,Health Care,$3.59B,3.59
-126,WAF,West African Resources Ltd,3.07,0,-0.1076,0.3406,Materials,$3.51B,3.51
-127,TWE,Treasury Wine Estates Ltd,4.34,0.0333,0.0823,-0.487,Consumer Staples,$3.5B,3.5
-128,EBO,Ebos Group Ltd,16.69,0.0121,-0.0905,-0.5354,Health Care,$3.45B,3.45
-129,NHF,Nib Holdings Ltd,6.8,0.018,0.0256,-0.0088,Financials,$3.32B,3.32
-130,NWH,NRW Holdings Ltd,7.22,0.0028,0.1836,1.6065,Industrials,$3.32B,3.32
-131,ILU,Iluka Resources Ltd,7.67,-0.0039,-0.0026,0.9974,Materials,$3.31B,3.31
-132,AUB,AUB Group Ltd,25.3,0.0502,0.0092,-0.2881,Financials,$3.31B,3.31
-133,MTS,Metcash Ltd,3,0.0274,0.0345,-0.1018,Consumer Staples,$3.3B,3.3
-134,AAI,Alcoa Corporation,86.83,0.0046,-0.1001,0.9326,Materials,$3.28B,3.28
-135,360,LIFE360 Inc,18,-0.0115,-0.1569,-0.4102,Information Technology,$3.26B,3.26
-136,SPK,Spark New Zealand Ltd,1.655,0.0153,-0.0543,-0.1766,Communication Services,$3.13B,3.13
-137,MND,Monadelphous Group Ltd,29.82,0.0167,0.0526,0.7267,Industrials,$2.98B,2.98
-138,MFF,MFF Capital Investments Ltd,4.92,0.0165,0.0271,0.1549,Financials,$2.92B,2.92
-139,L1G,L1 Group Ltd,1.135,0.0318,0.0365,1.0089,Financials,$2.91B,2.91
-140,BWP,BWP Group,3.82,0.0133,-0.0097,0.0587,Real Estate,$2.9B,2.9
-141,ZIP,ZIP Co Ltd,2.25,0.009,-0.0343,0.1421,Financials,$2.83B,2.83
-142,DRO,Droneshield Ltd,2.94,-0.0607,-0.1856,1.3902,Industrials,$2.71B,2.71
-143,OBM,Ora Banda Mining Ltd,1.405,0.0604,-0.0571,0.3911,Materials,$2.71B,2.71
-144,CIA,Champion Iron Ltd,4.81,0.0021,-0.0263,0.0907,Materials,$2.69B,2.69
-145,FBU,Fletcher Building Ltd,2.49,0.0205,0.0551,-0.17,Industrials,$2.68B,2.68
-146,LSF,L1 Long Short Fund Ltd,4.2,-0.0233,-0.0094,0.5,Financials,$2.66B,2.66
-147,RSG,Resolute Mining Ltd,1.245,-0.0119,-0.1201,1.1466,Materials,$2.66B,2.66
-148,GNE,Genesis Energy Ltd,2.02,0.01,0.0919,-0.0036,Utilities,$2.64B,2.64
-149,DBI,Dalrymple Bay Infrastructure Ltd,5.33,0.0152,0.039,0.3,Industrials,$2.64B,2.64
-150,MSB,Mesoblast Ltd,2.04,0,-0.0933,0.1724,Health Care,$2.64B,2.64
-151,HDN,Homeco Daily Needs REIT,1.255,0.0245,0.0329,-0.004,Real Estate,$2.62B,2.62
-152,RGN,Region Group,2.28,0.0133,0,-0.0215,Real Estate,$2.62B,2.62
-153,BPT,Beach Energy Ltd,1.145,0.0088,-0.0458,-0.126,Energy,$2.61B,2.61
-154,SUL,Super Retail Group Ltd,11.18,0.0219,-0.1049,-0.1986,Consumer Discretionary,$2.52B,2.52
-155,CLW,Charter Hall Long Wale REIT,3.51,0.0233,0.0086,-0.1181,Real Estate,$2.52B,2.52
-156,CSC,Capstone Copper Corp,13.11,0.0061,0.0077,0.7885,Materials,$2.42B,2.42
-157,AUI,Australian United Investment Company Ltd,10.9,0.0187,-0.0018,0.0158,Financials,$2.38B,2.38
-158,MXT,Metrics Master Income Trust,1.93,0.0078,-0.0077,-0.0631,Financials,$2.36B,2.36
-159,CTD,Corporate Travel Management Ltd,16.07,0,0,0.2486,Consumer Discretionary,$2.35B,2.35
-160,RWC,Reliance Worldwide Corporation Ltd,3.14,0.0329,0.0572,-0.3068,Industrials,$2.35B,2.35
-161,DRR,Deterra Royalties Ltd,4.43,0,0.0624,0.1973,Materials,$2.35B,2.35
-162,LOV,Lovisa Holdings Ltd,21.18,-0.0014,-0.1105,-0.2623,Consumer Discretionary,$2.35B,2.35
-163,BGL,Bellevue Gold Ltd,1.54,0.0199,-0.0968,0.75,Materials,$2.3B,2.3
-164,SMR,Stanmore Resources Ltd,2.5,0.0593,0.073,0.2987,Materials,$2.25B,2.25
-165,MP1,Megaport Ltd,12.6,-0.021,0.4841,0.0178,Information Technology,$2.24B,2.24
-166,CQR,Charter Hall Retail REIT,3.84,0.0213,0.0105,-0.0052,Real Estate,$2.23B,2.23
-167,ELV,Elevra Lithium Ltd,11.41,-0.0113,0.0992,3.7542,Materials,$2.2B,2.2
-168,4DX,4DMEDICAL Ltd,3.65,-0.0875,-0.375,12.2727,Health Care,$2.17B,2.17
-169,PXA,Pexa Group Ltd,12.14,0.0058,-0.0373,-0.0357,Real Estate,$2.14B,2.14
-170,LLC,Lendlease Group,3.04,0.0133,-0.0703,-0.4483,Real Estate,$2.1B,2.1
-171,ALK,Alkane Resources Ltd,1.53,0.0408,-0.1547,1.1399,Materials,$2.09B,2.09
-172,FLT,Flight Centre Travel Group Ltd,9.98,-0.0187,-0.1557,-0.2496,Consumer Discretionary,$2.06B,2.06
-173,NXG,Nexgen Energy (Canada) Ltd,15.52,-0.0032,-0.1167,0.8587,Energy,$2.02B,2.02
-174,IMD,IMDEX Ltd,3.92,0.0129,-0.0249,0.3901,Materials,$2.01B,2.01
-175,EVT,EVT Ltd,12.21,0.0348,-0.1002,-0.1972,Communication Services,$1.98B,1.98
-176,CBO,Cobram Estate Olives Ltd,4.11,0.0098,0.1578,1.2216,Consumer Staples,$1.97B,1.97
-177,PRN,Perenti Ltd,2.07,0.0147,-0.0096,0.4629,Materials,$1.94B,1.94
-178,MAQ,Macquarie Technology Group Ltd,74.52,-0.0037,0.1014,0.2041,Information Technology,$1.92B,1.92
-179,ASK,Abacus Storage King,1.46,0.0246,0.0355,-0.0395,Real Estate,$1.92B,1.92
-180,SRG,SRG Global Ltd,3.05,0,0.0339,1.0962,Industrials,$1.91B,1.91
-181,FRW,Freightways Group Ltd,10.6,0.0076,0.0589,0.1053,Industrials,$1.9B,1.9
-182,PPT,Perpetual Ltd,16.29,0.0213,-0.0109,-0.0864,Financials,$1.88B,1.88
-183,SRL,Sunrise Energy Metals Ltd,12.19,-0.0666,-0.0469,28.0238,Materials,$1.87B,1.87
-184,CIP,Centuria Industrial REIT,2.98,0.0171,0.0068,-0.0293,Real Estate,$1.86B,1.86
-185,VGN,Virgin Australia Holdings Ltd,2.36,0.0306,-0.0709,-0.1862,Industrials,$1.85B,1.85
-186,PMV,Premier Investments Ltd,11.56,0.0239,-0.094,-0.4588,Consumer Discretionary,$1.85B,1.85
-187,MAH,Macmahon Holdings Ltd,0.85,-0.023,0,1.931,Materials,$1.83B,1.83
-188,WLE,Wam Leaders Ltd,1.325,0,-0.0038,0.06,Financials,$1.83B,1.83
-189,WAM,WAM Capital Ltd,1.615,0,-0.0692,0.0386,Financials,$1.83B,1.83
-190,SLC,Superloop Ltd,3.55,0.0114,0.0441,0.4032,Communication Services,$1.83B,1.83
-191,REG,Regis Healthcare Ltd,5.93,-0.0117,0.0068,-0.2299,Health Care,$1.79B,1.79
-192,MI6,Minerals 260 Ltd,0.79,-0.0307,0.0194,4.4483,Materials,$1.79B,1.79
-193,DVP,Develop Global Ltd,5.39,-0.0253,-0.0306,0.4647,Materials,$1.78B,1.78
-194,GYG,Guzman Y GOMEZ Ltd,17.48,0.0157,-0.1398,-0.4602,Consumer Discretionary,$1.77B,1.77
-195,GNP,Genusplus Group Ltd,9.74,0,0.2145,2.1318,Industrials,$1.77B,1.77
-196,MGH,Maas Group Holdings Ltd,4.83,-0.0143,0.0126,0.1078,Industrials,$1.75B,1.75
-197,RYM,Ryman Healthcare Ltd,1.71,-0.0058,0.0556,-0.25,Health Care,$1.74B,1.74
-198,ZIM,Zimplats Holdings Ltd,15.71,0.0195,-0.1603,0.4282,Materials,$1.69B,1.69
-199,GLF,Gemlife Communities Group,4.32,-0.0204,-0.0421,0.0385,Real Estate,$1.64B,1.64
-200,BRE,Brazilian Rare EARTHS Ltd,5.84,-0.0051,0.3183,2.1064,Materials,$1.64B,1.64
+﻿Rank,Code,Company,Price,1 Day,1 Month,1 Year,Sector,Mkt Cap,MktCapB,HeadOffice,HeadOfficeCity
+1,BHP,BHP Group Ltd,58.7,-0.0012,0.0497,0.5148,Materials,$298.28B,298.28,"BHP Group Ltd, Melbourne",Melbourne
+2,CBA,Commonwealth Bank of Australia,162.88,0.0133,-0.0861,-0.0495,Financials,$272.57B,272.57,"Commonwealth Bank of Australia, Sydney",Sydney
+3,WBC,Westpac Banking Corporation,36.39,0.019,-0.0841,0.16,Financials,$124.46B,124.46,"Westpac Banking Corporation, Sydney",Sydney
+4,NAB,National Australia Bank Ltd,37.04,0.0198,-0.1295,0.0054,Financials,$113.62B,113.62,"National Australia Bank Ltd, Melbourne",Melbourne
+5,ANZ,ANZ Group Holdings Ltd,35.52,0.0131,-0.0633,0.2507,Financials,$107.06B,107.06,"ANZ Group Holdings Ltd, Melbourne",Melbourne
+6,MQG,Macquarie Group Ltd,240.98,0.0187,0.0046,0.1814,Financials,$91.85B,91.85,"Macquarie Group Ltd, Sydney",Sydney
+7,WES,Wesfarmers Ltd,72.98,0.0241,0.0018,-0.1189,Consumer Discretionary,$82.8B,82.8,"Wesfarmers Ltd, Perth",Perth
+8,FMG,Fortescue Ltd,21.88,-0.0032,0.0306,0.3531,Materials,$67.37B,67.37,"Fortescue Ltd, Perth",Perth
+9,RIO,RIO Tinto Ltd,178.66,-0.002,0.0283,0.4956,Materials,$66.43B,66.43,"RIO Tinto Ltd, Melbourne",Melbourne
+10,GMG,Goodman Group,30.65,0.0176,0.0432,-0.0307,Real Estate,$62.67B,62.67,"Goodman Group, Sydney",Sydney
+11,TLS,Telstra Group Ltd,5.55,0.0259,0.0413,0.2171,Communication Services,$62.1B,62.1,"Telstra Group Ltd, Melbourne",Melbourne
+12,WDS,Woodside Energy Group Ltd,32.28,0.004,-0.0138,0.4951,Energy,$61.37B,61.37,"Woodside Energy Group Ltd, Perth",Perth
+13,CSL,CSL Ltd,98.69,0.0257,-0.2803,-0.5918,Health Care,$47.26B,47.26,"CSL Ltd, Melbourne",Melbourne
+14,TCL,Transurban Group,14.47,-0.0007,0.0671,0.0162,Industrials,$45.15B,45.15,"Transurban Group, Melbourne",Melbourne
+15,WOW,Woolworths Group Ltd,34.21,0.0373,-0.0701,0.0734,Consumer Staples,$41.79B,41.79,"Woolworths Group Ltd, Sydney",Sydney
+16,QBE,QBE Insurance Group Ltd,23.93,0.0288,0.0509,0.0612,Financials,$35.75B,35.75,"QBE Insurance Group Ltd, Sydney",Sydney
+17,SIG,Sigma Healthcare Ltd,2.85,0.0106,0.0179,-0.0273,Health Care,$32.9B,32.9,"Sigma Healthcare Ltd, Melbourne",Melbourne
+18,ALL,Aristocrat Leisure Ltd,51.74,0.0066,0.0542,-0.1743,Consumer Discretionary,$31.2B,31.2,"Aristocrat Leisure Ltd, Sydney",Sydney
+19,COL,Coles Group Ltd,21.41,0.0269,-0.0501,-0.0111,Consumer Staples,$28.76B,28.76,"Coles Group Ltd, Melbourne",Melbourne
+20,NST,Northern Star Resources Ltd,19.86,-0.007,-0.1641,0.0519,Materials,$28.4B,28.4,"Northern Star Resources Ltd, Perth",Perth
+21,STO,Santos Ltd,8.09,0,0.0575,0.278,Energy,$26.27B,26.27,"Santos Ltd, Adelaide",Adelaide
+22,EVN,Evolution Mining Ltd,11.95,0.0017,-0.12,0.4717,Materials,$24.27B,24.27,"Evolution Mining Ltd, Sydney",Sydney
+23,BXB,Brambles Ltd,17.53,-0.0057,-0.2171,-0.1925,Industrials,$23.61B,23.61,"Brambles Ltd, Sydney",Sydney
+24,REA,REA Group Ltd,167.8,0.0194,-0.0392,-0.3348,Communication Services,$22.09B,22.09,"REA Group Ltd, Melbourne",Melbourne
+25,ORG,Origin Energy Ltd,11.57,0.0114,-0.0722,0.0461,Utilities,$19.93B,19.93,"Origin Energy Ltd, Sydney",Sydney
+26,SUN,Suncorp Group Ltd,17.83,0.0206,0.0683,-0.1319,Financials,$19.31B,19.31,"Suncorp Group Ltd, Brisbane",Brisbane
+27,IAG,Insurance Australia Group Ltd,8.17,0.0225,0.0937,-0.0467,Financials,$19.2B,19.2,"Insurance Australia Group Ltd, Sydney",Sydney
+28,CPU,Computershare Ltd,33.12,0.0321,0.0757,-0.1983,Industrials,$19.16B,19.16,"Computershare Ltd, Melbourne",Melbourne
+29,PLS,PLS Group Ltd,5.92,-0.0133,-0.0199,3.2135,Materials,$19.07B,19.07,"PLS Group Ltd, Perth",Perth
+30,SCG,Scentre Group,3.64,0.0139,0.0312,0.0028,Real Estate,$19.01B,19.01,"Scentre Group, Sydney",Sydney
+31,LYC,Lynas Rare EARTHS Ltd,18.12,-0.0428,-0.1246,1.3905,Materials,$18.24B,18.24,"Lynas Rare EARTHS Ltd, Perth",Perth
+32,S32,SOUTH32 Ltd,4.06,0.0074,-0.1038,0.381,Materials,$18.22B,18.22,"SOUTH32 Ltd, Perth",Perth
+33,SGH,SGH Ltd,40.2,0.0358,-0.015,-0.2333,Industrials,$16.36B,16.36,"SGH Ltd, Sydney",Sydney
+34,RMD,Resmed Inc,28.75,0.0199,-0.0879,-0.2604,Health Care,$16.22B,16.22,"Resmed Inc, San Diego",San Diego
+35,SOL,Washington H. Soul Pattinson and Company Ltd,42.61,0.017,-0.0153,0.1393,Financials,$16.19B,16.19,"Washington H. Soul Pattinson and Company Ltd, Sydney",Sydney
+36,FPH,Fisher & Paykel Healthcare Corporation Ltd,27.5,0.0311,-0.1194,-0.1789,Health Care,$16.15B,16.15,"Fisher & Paykel Healthcare Corporation Ltd, Auckland",Auckland
+37,APA,APA Group,10.35,0.0068,0.0413,0.253,Utilities,$13.7B,13.7,"APA Group, Sydney",Sydney
+38,PME,Pro Medicus Ltd,130.26,0.0378,-0.1242,-0.5319,Health Care,$13.61B,13.61,"Pro Medicus Ltd, Melbourne",Melbourne
+39,XRO,Xero Ltd,78.62,0.007,-0.041,-0.5668,Information Technology,$13.41B,13.41,"Xero Ltd, Wellington",Wellington
+40,MPL,Medibank Private Ltd,4.79,0.0213,0.0257,0.0063,Financials,$13.19B,13.19,"Medibank Private Ltd, Melbourne",Melbourne
+41,MIN,Mineral Resources Ltd,65.74,0.0256,0.0346,1.7301,Materials,$12.99B,12.99,"Mineral Resources Ltd, Perth",Perth
+42,BSL,Bluescope Steel Ltd,29.6,0.0024,0.0353,0.2677,Materials,$12.97B,12.97,"Bluescope Steel Ltd, Melbourne",Melbourne
+43,QAN,Qantas Airways Ltd,8.55,0.013,-0.0584,-0.1634,Industrials,$12.94B,12.94,"Qantas Airways Ltd, Sydney",Sydney
+44,WTC,Wisetech Global Ltd,38.12,-0.0021,-0.1745,-0.6165,Information Technology,$12.81B,12.81,"Wisetech Global Ltd, Sydney",Sydney
+45,IFT,Infratil Ltd,12.45,0.0057,0.255,0.1712,Financials,$12.44B,12.44,"Infratil Ltd, Wellington",Wellington
+46,NEM,Newmont Corporation,153.43,0.0175,-0.0186,0.9326,Materials,$12.38B,12.38,"Newmont Corporation, Denver",Denver
+47,TLC,The Lottery Corporation Ltd,5.33,0.0152,-0.0533,0,Consumer Discretionary,$11.86B,11.86,"The Lottery Corporation Ltd, Brisbane",Brisbane
+48,ALQ,Als Ltd,23.32,0.0683,0.0533,0.3168,Industrials,$11.84B,11.84,"Als Ltd, Brisbane",Brisbane
+49,VCX,Vicinity Centres,2.55,0.0159,0.0039,0.0851,Real Estate,$11.83B,11.83,"Vicinity Centres, Melbourne",Melbourne
+50,ASX,ASX Ltd,59.29,0.018,0.0042,-0.1731,Financials,$11.59B,11.59,"ASX Ltd, Sydney",Sydney
+51,AIA,Auckland International Airport Ltd,6.75,-0.003,0.003,-0.0741,Industrials,$11.47B,11.47,"Auckland International Airport Ltd, Auckland",Auckland
+52,NXT,NEXTDC Ltd,14.55,-0.0021,0.0469,0.095,Information Technology,$11.05B,11.05,"NEXTDC Ltd, Brisbane",Brisbane
+53,ORI,Orica Ltd,23.07,0.0244,0.1292,0.2423,Materials,$10.69B,10.69,"Orica Ltd, Melbourne",Melbourne
+54,CAR,CAR Group Ltd,26.7,0.0369,0.0179,-0.2606,Communication Services,$10.12B,10.12,"CAR Group Ltd, Melbourne",Melbourne
+55,SGP,Stockland,3.95,0.0313,-0.0857,-0.2831,Real Estate,$9.6B,9.6,"Stockland, Sydney",Sydney
+56,LNW,Light & Wonder Inc,114.58,0.0137,-0.057,-0.1184,Consumer Discretionary,$9.3B,9.3,"Light & Wonder Inc, Las Vegas",Las Vegas
+57,CHC,Charter Hall Group,19.45,0.0221,-0.0636,0.0818,Real Estate,$9.2B,9.2,"Charter Hall Group, Sydney",Sydney
+58,GPT,GPT Group,4.77,0.0236,0.0214,0.0192,Real Estate,$9.14B,9.14,"GPT Group, Sydney",Sydney
+59,SHL,Sonic Healthcare Ltd,18.43,0.0022,-0.1036,-0.3053,Health Care,$9.11B,9.11,"Sonic Healthcare Ltd, Sydney",Sydney
+60,TNE,Technology One Ltd,27.8,-0.0293,-0.0983,-0.1581,Information Technology,$9.1B,9.1,"Technology One Ltd, Brisbane",Brisbane
+61,YAL,Yancoal Australia Ltd,6.85,0.027,0.0178,0.3591,Energy,$9.05B,9.05,"Yancoal Australia Ltd, Sydney",Sydney
+62,JHX,James Hardie Industries Plc,26.78,0.0292,-0.0449,-0.3017,Materials,$9.02B,9.02,"James Hardie Industries Plc, Dublin",Dublin
+63,QUB,QUBE Holdings Ltd,5.02,0.002,0.002,0.1812,Industrials,$8.89B,8.89,"QUBE Holdings Ltd, Sydney",Sydney
+64,GGP,Greatland Resources Ltd,13.12,-0.0121,-0.0806,0.9879,Materials,$8.83B,8.83,"Greatland Resources Ltd, London",London
+65,RHC,Ramsay Health Care Ltd,38.15,0.028,-0.0743,0.0759,Health Care,$8.81B,8.81,"Ramsay Health Care Ltd, Sydney",Sydney
+66,ALD,Ampol Ltd,35.69,0.0034,0.0838,0.3514,Energy,$8.51B,8.51,"Ampol Ltd, Sydney",Sydney
+67,SFR,Sandfire Resources Ltd,18.08,-0.0033,-0.0077,0.7203,Materials,$8.44B,8.44,"Sandfire Resources Ltd, Perth",Perth
+68,REH,Reece Ltd,13.71,0.0379,0.0787,-0.1681,Industrials,$8.43B,8.43,"Reece Ltd, Melbourne",Melbourne
+69,TPG,TPG Telecom Ltd,4.22,0.0144,-0.0232,-0.1822,Communication Services,$8.28B,8.28,"TPG Telecom Ltd, Sydney",Sydney
+70,AFI,Australian Foundation Investment Company Ltd,6.65,0.003,0.0015,-0.0673,Financials,$8.27B,8.27,"Australian Foundation Investment Company Ltd, Melbourne",Melbourne
+71,MCY,Mercury NZ Ltd,5.58,-0.0211,0.0314,-0.0412,Utilities,$7.95B,7.95,"Mercury NZ Ltd, Auckland",Auckland
+72,JBH,JB Hi-Fi Ltd,69.84,-0.0111,-0.0819,-0.3296,Consumer Discretionary,$7.64B,7.64,"JB Hi-Fi Ltd, Melbourne",Melbourne
+73,AMC,Amcor Plc,52.5,0.0206,-0.0632,-0.2843,Materials,$7.56B,7.56,"Amcor Plc, Zurich",Zurich
+74,CDA,Codan Ltd,40.07,0.0083,0.1796,1.364,Information Technology,$7.29B,7.29,"Codan Ltd, Adelaide",Adelaide
+75,PRU,Perseus Mining Ltd,5.38,0.0019,-0.041,0.5824,Materials,$7.23B,7.23,"Perseus Mining Ltd, Perth",Perth
+76,AZJ,Aurizon Holdings Ltd,4.25,0.0192,0.0391,0.4214,Industrials,$7.15B,7.15,"Aurizon Holdings Ltd, Brisbane",Brisbane
+77,LTR,Liontown Ltd,2.23,-0.0388,0.0136,2.2794,Materials,$7.09B,7.09,"Liontown Ltd, Perth",Perth
+78,ALX,Atlas Arteria,4.87,0.0104,0.1405,-0.0706,Industrials,$7.07B,7.07,"Atlas Arteria, Melbourne",Melbourne
+79,GMD,Genesis Minerals Ltd,6.08,0.0066,-0.076,0.5432,Materials,$6.95B,6.95,"Genesis Minerals Ltd, Perth",Perth
+80,WHC,Whitehaven Coal Ltd,8.15,0.0137,0.0188,0.5177,Energy,$6.72B,6.72,"Whitehaven Coal Ltd, Sydney",Sydney
+81,ARG,Argo Investments Ltd,8.84,0.0103,0.0103,-0.0045,Financials,$6.71B,6.71,"Argo Investments Ltd, Adelaide",Adelaide
+82,MGR,Mirvac Group,1.685,0.009,-0.0534,-0.2511,Real Estate,$6.65B,6.65,"Mirvac Group, Sydney",Sydney
+83,HUB,HUB24 Ltd,81.01,0.017,-0.1539,0.0077,Financials,$6.62B,6.62,"HUB24 Ltd, Sydney",Sydney
+84,DXS,Dexus,6.08,0.0184,-0.0065,-0.1425,Real Estate,$6.52B,6.52,"Dexus, Sydney",Sydney
+85,CGF,Challenger Ltd,9.37,0.0196,0.1155,0.3032,Financials,$6.46B,6.46,"Challenger Ltd, Sydney",Sydney
+86,DNL,Dyno Nobel Ltd,3.65,0.0111,0.13,0.3826,Materials,$6.41B,6.41,"Dyno Nobel Ltd, Melbourne",Melbourne
+87,MEZ,Meridian Energy Ltd,4.84,0.0021,0.0431,-0.0987,Utilities,$6.38B,6.38,"Meridian Energy Ltd, Wellington",Wellington
+88,APE,Eagers Automotive Ltd,22.18,-0.0058,-0.0622,0.2832,Consumer Discretionary,$6.26B,6.26,"Eagers Automotive Ltd, Brisbane",Brisbane
+89,IGO,IGO Ltd,8.25,-0.0132,-0.1081,0.9928,Materials,$6.25B,6.25,"IGO Ltd, Perth",Perth
+90,COH,Cochlear Ltd,95.37,0.0198,-0.4339,-0.6482,Health Care,$6.24B,6.24,"Cochlear Ltd, Sydney",Sydney
+91,AGL,AGL Energy Ltd,9.13,0.0144,-0.039,-0.1187,Utilities,$6.14B,6.14,"AGL Energy Ltd, Sydney",Sydney
+92,RMS,Ramelius Resources Ltd,3.22,0.0031,-0.1848,0.2628,Materials,$6.11B,6.11,"Ramelius Resources Ltd, Perth",Perth
+93,BEN,Bendigo and Adelaide Bank Ltd,10.51,0.0184,-0.054,-0.1071,Financials,$6.09B,6.09,"Bendigo and Adelaide Bank Ltd, Bendigo",Bendigo
+94,WOR,Worley Ltd,12.41,0.0156,0.0499,-0.0387,Industrials,$6.08B,6.08,"Worley Ltd, Sydney",Sydney
+95,CMM,Capricorn Metals Ltd,12.83,-0.0169,0.1051,0.473,Materials,$5.86B,5.86,"Capricorn Metals Ltd, Perth",Perth
+96,EDV,Endeavour Group Ltd,3.09,0.0232,-0.0522,-0.2463,Consumer Staples,$5.55B,5.55,"Endeavour Group Ltd, Sydney",Sydney
+97,NWL,Netwealth Group Ltd,22.2,0.01,-0.1267,-0.2816,Financials,$5.45B,5.45,"Netwealth Group Ltd, Melbourne",Melbourne
+98,HVN,Harvey Norman Holdings Ltd,4.37,0,-0.0438,-0.177,Consumer Discretionary,$5.45B,5.45,"Harvey Norman Holdings Ltd, Sydney",Sydney
+99,DOW,Downer Edi Ltd,7.73,0.0211,0.0517,0.259,Industrials,$5.11B,5.11,"Downer Edi Ltd, Sydney",Sydney
+100,SEK,Seek Ltd,13.97,0.0341,-0.097,-0.3713,Communication Services,$4.99B,4.99,"Seek Ltd, Melbourne",Melbourne
+101,VNT,Ventia Services Group Ltd,6.03,0.0135,0.1641,0.294,Industrials,$4.95B,4.95,"Ventia Services Group Ltd, Sydney",Sydney
+102,WGX,Westgold Resources Ltd,5.21,0.0136,-0.173,1.0039,Materials,$4.92B,4.92,"Westgold Resources Ltd, Perth",Perth
+103,RRL,Regis Resources Ltd,6.46,0.0094,-0.1444,0.4044,Materials,$4.89B,4.89,"Regis Resources Ltd, Perth",Perth
+104,CWY,Cleanaway Waste Management Ltd,2.18,0.0093,-0.0563,-0.1956,Industrials,$4.89B,4.89,"Cleanaway Waste Management Ltd, Melbourne",Melbourne
+105,TLX,TELIX Pharmaceuticals Ltd,14.21,-0.0035,-0.0294,-0.4479,Health Care,$4.82B,4.82,"TELIX Pharmaceuticals Ltd, Melbourne",Melbourne
+106,PDN,Paladin Energy Ltd,10.63,0.0241,-0.2689,0.8781,Energy,$4.78B,4.78,"Paladin Energy Ltd, Perth",Perth
+107,NHC,New Hope Corporation Ltd,5.51,0.0357,0.0436,0.5096,Energy,$4.65B,4.65,"New Hope Corporation Ltd, Brisbane",Brisbane
+108,VAU,Vault Minerals Ltd,4.49,0.0251,-0.0302,0.6064,Materials,$4.65B,4.65,"Vault Minerals Ltd, Perth",Perth
+109,GQG,GQG Partners Inc,1.565,-0.0126,-0.0794,-0.3075,Financials,$4.63B,4.63,"GQG Partners Inc, Fort Lauderdale",Fort Lauderdale
+110,SDF,Steadfast Group Ltd,4.15,0.0375,-0.0416,-0.2942,Financials,$4.61B,4.61,"Steadfast Group Ltd, Sydney",Sydney
+111,CEN,Contact Energy Ltd,8.2,0.0111,0.079,-0.0443,Utilities,$4.41B,4.41,"Contact Energy Ltd, Wellington",Wellington
+112,NIC,Nickel Industries Ltd,1.015,0,0.0253,0.5263,Materials,$4.41B,4.41,"Nickel Industries Ltd, Sydney",Sydney
+113,SGM,Sims Ltd,22.41,0.0173,0.1463,0.4666,Materials,$4.33B,4.33,"Sims Ltd, Sydney",Sydney
+114,A2M,The a2 Milk Company Ltd,5.87,0.0103,-0.2142,-0.285,Consumer Staples,$4.26B,4.26,"The a2 Milk Company Ltd, Auckland",Auckland
+115,BRG,Breville Group Ltd,29.24,0.0083,0.0156,0.0079,Consumer Discretionary,$4.24B,4.24,"Breville Group Ltd, Sydney",Sydney
+116,BOQ,Bank of Queensland Ltd,6.38,0.0208,-0.1272,-0.1649,Financials,$4.22B,4.22,"Bank of Queensland Ltd, Brisbane",Brisbane
+117,PDI,Predictive Discovery Ltd,0.835,-0.0774,-0.1022,1.1974,Materials,$4.09B,4.09,"Predictive Discovery Ltd, Perth",Perth
+118,AMP,AMP Ltd,1.595,0.029,0.1193,0.2083,Financials,$4.04B,4.04,"AMP Ltd, Sydney",Sydney
+119,EMR,Emerald Resources NL,5.87,-0.0034,-0.0941,0.3812,Materials,$3.88B,3.88,"Emerald Resources NL, Perth",Perth
+120,BFL,BSP Financial Group Ltd,8.3,-0.0178,0.0247,0.0979,Financials,$3.88B,3.88,"BSP Financial Group Ltd, Port Moresby",Port Moresby
+121,VEA,Viva Energy Group Ltd,2.31,0,-0.087,0.1969,Energy,$3.79B,3.79,"Viva Energy Group Ltd, Melbourne",Melbourne
+122,PNI,Pinnacle Investment Management Group Ltd,15.5,0.0279,-0.093,-0.2238,Financials,$3.74B,3.74,"Pinnacle Investment Management Group Ltd, Sydney",Sydney
+123,CNU,Chorus Ltd,8.39,0.017,0.0474,0.1069,Communication Services,$3.64B,3.64,"Chorus Ltd, Wellington",Wellington
+124,XYZ,"Block, Inc",98.6,0.0097,0.02,0.1148,Financials,$3.63B,3.63,"Block, Inc, San Francisco","Inc, San Francisco"
+125,ANN,Ansell Ltd,25.45,0.016,-0.0619,-0.2029,Health Care,$3.59B,3.59,"Ansell Ltd, Melbourne",Melbourne
+126,WAF,West African Resources Ltd,3.07,0,-0.1076,0.3406,Materials,$3.51B,3.51,"West African Resources Ltd, Perth",Perth
+127,TWE,Treasury Wine Estates Ltd,4.34,0.0333,0.0823,-0.487,Consumer Staples,$3.5B,3.5,"Treasury Wine Estates Ltd, Melbourne",Melbourne
+128,EBO,Ebos Group Ltd,16.69,0.0121,-0.0905,-0.5354,Health Care,$3.45B,3.45,"Ebos Group Ltd, Christchurch",Christchurch
+129,NHF,Nib Holdings Ltd,6.8,0.018,0.0256,-0.0088,Financials,$3.32B,3.32,"Nib Holdings Ltd, Newcastle",Newcastle
+130,NWH,NRW Holdings Ltd,7.22,0.0028,0.1836,1.6065,Industrials,$3.32B,3.32,"NRW Holdings Ltd, Perth",Perth
+131,ILU,Iluka Resources Ltd,7.67,-0.0039,-0.0026,0.9974,Materials,$3.31B,3.31,"Iluka Resources Ltd, Perth",Perth
+132,AUB,AUB Group Ltd,25.3,0.0502,0.0092,-0.2881,Financials,$3.31B,3.31,"AUB Group Ltd, Sydney",Sydney
+133,MTS,Metcash Ltd,3,0.0274,0.0345,-0.1018,Consumer Staples,$3.3B,3.3,"Metcash Ltd, Sydney",Sydney
+134,AAI,Alcoa Corporation,86.83,0.0046,-0.1001,0.9326,Materials,$3.28B,3.28,"Alcoa Corporation, Pittsburgh",Pittsburgh
+135,360,LIFE360 Inc,18,-0.0115,-0.1569,-0.4102,Information Technology,$3.26B,3.26,"LIFE360 Inc, San Francisco",San Francisco
+136,SPK,Spark New Zealand Ltd,1.655,0.0153,-0.0543,-0.1766,Communication Services,$3.13B,3.13,"Spark New Zealand Ltd, Auckland",Auckland
+137,MND,Monadelphous Group Ltd,29.82,0.0167,0.0526,0.7267,Industrials,$2.98B,2.98,"Monadelphous Group Ltd, Perth",Perth
+138,MFF,MFF Capital Investments Ltd,4.92,0.0165,0.0271,0.1549,Financials,$2.92B,2.92,"MFF Capital Investments Ltd, Sydney",Sydney
+139,L1G,L1 Group Ltd,1.135,0.0318,0.0365,1.0089,Financials,$2.91B,2.91,"L1 Group Ltd, Melbourne",Melbourne
+140,BWP,BWP Group,3.82,0.0133,-0.0097,0.0587,Real Estate,$2.9B,2.9,"BWP Group, Perth",Perth
+141,ZIP,ZIP Co Ltd,2.25,0.009,-0.0343,0.1421,Financials,$2.83B,2.83,"ZIP Co Ltd, Sydney",Sydney
+142,DRO,Droneshield Ltd,2.94,-0.0607,-0.1856,1.3902,Industrials,$2.71B,2.71,"Droneshield Ltd, Sydney",Sydney
+143,OBM,Ora Banda Mining Ltd,1.405,0.0604,-0.0571,0.3911,Materials,$2.71B,2.71,"Ora Banda Mining Ltd, Perth",Perth
+144,CIA,Champion Iron Ltd,4.81,0.0021,-0.0263,0.0907,Materials,$2.69B,2.69,"Champion Iron Ltd, Montreal",Montreal
+145,FBU,Fletcher Building Ltd,2.49,0.0205,0.0551,-0.17,Industrials,$2.68B,2.68,"Fletcher Building Ltd, Auckland",Auckland
+146,LSF,L1 Long Short Fund Ltd,4.2,-0.0233,-0.0094,0.5,Financials,$2.66B,2.66,"L1 Long Short Fund Ltd, Melbourne",Melbourne
+147,RSG,Resolute Mining Ltd,1.245,-0.0119,-0.1201,1.1466,Materials,$2.66B,2.66,"Resolute Mining Ltd, Perth",Perth
+148,GNE,Genesis Energy Ltd,2.02,0.01,0.0919,-0.0036,Utilities,$2.64B,2.64,"Genesis Energy Ltd, Auckland",Auckland
+149,DBI,Dalrymple Bay Infrastructure Ltd,5.33,0.0152,0.039,0.3,Industrials,$2.64B,2.64,"Dalrymple Bay Infrastructure Ltd, Brisbane",Brisbane
+150,MSB,Mesoblast Ltd,2.04,0,-0.0933,0.1724,Health Care,$2.64B,2.64,"Mesoblast Ltd, Melbourne",Melbourne
+151,HDN,Homeco Daily Needs REIT,1.255,0.0245,0.0329,-0.004,Real Estate,$2.62B,2.62,"Homeco Daily Needs REIT, Sydney",Sydney
+152,RGN,Region Group,2.28,0.0133,0,-0.0215,Real Estate,$2.62B,2.62,"Region Group, Sydney",Sydney
+153,BPT,Beach Energy Ltd,1.145,0.0088,-0.0458,-0.126,Energy,$2.61B,2.61,"Beach Energy Ltd, Adelaide",Adelaide
+154,SUL,Super Retail Group Ltd,11.18,0.0219,-0.1049,-0.1986,Consumer Discretionary,$2.52B,2.52,"Super Retail Group Ltd, Brisbane",Brisbane
+155,CLW,Charter Hall Long Wale REIT,3.51,0.0233,0.0086,-0.1181,Real Estate,$2.52B,2.52,"Charter Hall Long Wale REIT, Sydney",Sydney
+156,CSC,Capstone Copper Corp,13.11,0.0061,0.0077,0.7885,Materials,$2.42B,2.42,"Capstone Copper Corp, Vancouver",Vancouver
+157,AUI,Australian United Investment Company Ltd,10.9,0.0187,-0.0018,0.0158,Financials,$2.38B,2.38,"Australian United Investment Company Ltd, Melbourne",Melbourne
+158,MXT,Metrics Master Income Trust,1.93,0.0078,-0.0077,-0.0631,Financials,$2.36B,2.36,"Metrics Master Income Trust, Sydney",Sydney
+159,CTD,Corporate Travel Management Ltd,16.07,0,0,0.2486,Consumer Discretionary,$2.35B,2.35,"Corporate Travel Management Ltd, Brisbane",Brisbane
+160,RWC,Reliance Worldwide Corporation Ltd,3.14,0.0329,0.0572,-0.3068,Industrials,$2.35B,2.35,"Reliance Worldwide Corporation Ltd, Atlanta",Atlanta
+161,DRR,Deterra Royalties Ltd,4.43,0,0.0624,0.1973,Materials,$2.35B,2.35,"Deterra Royalties Ltd, Perth",Perth
+162,LOV,Lovisa Holdings Ltd,21.18,-0.0014,-0.1105,-0.2623,Consumer Discretionary,$2.35B,2.35,"Lovisa Holdings Ltd, Melbourne",Melbourne
+163,BGL,Bellevue Gold Ltd,1.54,0.0199,-0.0968,0.75,Materials,$2.3B,2.3,"Bellevue Gold Ltd, Perth",Perth
+164,SMR,Stanmore Resources Ltd,2.5,0.0593,0.073,0.2987,Materials,$2.25B,2.25,"Stanmore Resources Ltd, Brisbane",Brisbane
+165,MP1,Megaport Ltd,12.6,-0.021,0.4841,0.0178,Information Technology,$2.24B,2.24,"Megaport Ltd, Brisbane",Brisbane
+166,CQR,Charter Hall Retail REIT,3.84,0.0213,0.0105,-0.0052,Real Estate,$2.23B,2.23,"Charter Hall Retail REIT, Sydney",Sydney
+167,ELV,Elevra Lithium Ltd,11.41,-0.0113,0.0992,3.7542,Materials,$2.2B,2.2,"Elevra Lithium Ltd, Perth",Perth
+168,4DX,4DMEDICAL Ltd,3.65,-0.0875,-0.375,12.2727,Health Care,$2.17B,2.17,"4DMEDICAL Ltd, Melbourne",Melbourne
+169,PXA,Pexa Group Ltd,12.14,0.0058,-0.0373,-0.0357,Real Estate,$2.14B,2.14,"Pexa Group Ltd, Melbourne",Melbourne
+170,LLC,Lendlease Group,3.04,0.0133,-0.0703,-0.4483,Real Estate,$2.1B,2.1,"Lendlease Group, Sydney",Sydney
+171,ALK,Alkane Resources Ltd,1.53,0.0408,-0.1547,1.1399,Materials,$2.09B,2.09,"Alkane Resources Ltd, Perth",Perth
+172,FLT,Flight Centre Travel Group Ltd,9.98,-0.0187,-0.1557,-0.2496,Consumer Discretionary,$2.06B,2.06,"Flight Centre Travel Group Ltd, Brisbane",Brisbane
+173,NXG,Nexgen Energy (Canada) Ltd,15.52,-0.0032,-0.1167,0.8587,Energy,$2.02B,2.02,"Nexgen Energy (Canada) Ltd, Vancouver",Vancouver
+174,IMD,IMDEX Ltd,3.92,0.0129,-0.0249,0.3901,Materials,$2.01B,2.01,"IMDEX Ltd, Perth",Perth
+175,EVT,EVT Ltd,12.21,0.0348,-0.1002,-0.1972,Communication Services,$1.98B,1.98,"EVT Ltd, Sydney",Sydney
+176,CBO,Cobram Estate Olives Ltd,4.11,0.0098,0.1578,1.2216,Consumer Staples,$1.97B,1.97,"Cobram Estate Olives Ltd, Melbourne",Melbourne
+177,PRN,Perenti Ltd,2.07,0.0147,-0.0096,0.4629,Materials,$1.94B,1.94,"Perenti Ltd, Perth",Perth
+178,MAQ,Macquarie Technology Group Ltd,74.52,-0.0037,0.1014,0.2041,Information Technology,$1.92B,1.92,"Macquarie Technology Group Ltd, Sydney",Sydney
+179,ASK,Abacus Storage King,1.46,0.0246,0.0355,-0.0395,Real Estate,$1.92B,1.92,"Abacus Storage King, Sydney",Sydney
+180,SRG,SRG Global Ltd,3.05,0,0.0339,1.0962,Industrials,$1.91B,1.91,"SRG Global Ltd, Perth",Perth
+181,FRW,Freightways Group Ltd,10.6,0.0076,0.0589,0.1053,Industrials,$1.9B,1.9,"Freightways Group Ltd, Auckland",Auckland
+182,PPT,Perpetual Ltd,16.29,0.0213,-0.0109,-0.0864,Financials,$1.88B,1.88,"Perpetual Ltd, Sydney",Sydney
+183,SRL,Sunrise Energy Metals Ltd,12.19,-0.0666,-0.0469,28.0238,Materials,$1.87B,1.87,"Sunrise Energy Metals Ltd, Melbourne",Melbourne
+184,CIP,Centuria Industrial REIT,2.98,0.0171,0.0068,-0.0293,Real Estate,$1.86B,1.86,"Centuria Industrial REIT, Sydney",Sydney
+185,VGN,Virgin Australia Holdings Ltd,2.36,0.0306,-0.0709,-0.1862,Industrials,$1.85B,1.85,"Virgin Australia Holdings Ltd, Brisbane",Brisbane
+186,PMV,Premier Investments Ltd,11.56,0.0239,-0.094,-0.4588,Consumer Discretionary,$1.85B,1.85,"Premier Investments Ltd, Melbourne",Melbourne
+187,MAH,Macmahon Holdings Ltd,0.85,-0.023,0,1.931,Materials,$1.83B,1.83,"Macmahon Holdings Ltd, Perth",Perth
+188,WLE,Wam Leaders Ltd,1.325,0,-0.0038,0.06,Financials,$1.83B,1.83,"Wam Leaders Ltd, Sydney",Sydney
+189,WAM,WAM Capital Ltd,1.615,0,-0.0692,0.0386,Financials,$1.83B,1.83,"WAM Capital Ltd, Sydney",Sydney
+190,SLC,Superloop Ltd,3.55,0.0114,0.0441,0.4032,Communication Services,$1.83B,1.83,"Superloop Ltd, Sydney",Sydney
+191,REG,Regis Healthcare Ltd,5.93,-0.0117,0.0068,-0.2299,Health Care,$1.79B,1.79,"Regis Healthcare Ltd, Sydney",Sydney
+192,MI6,Minerals 260 Ltd,0.79,-0.0307,0.0194,4.4483,Materials,$1.79B,1.79,"Minerals 260 Ltd, Perth",Perth
+193,DVP,Develop Global Ltd,5.39,-0.0253,-0.0306,0.4647,Materials,$1.78B,1.78,"Develop Global Ltd, Perth",Perth
+194,GYG,Guzman Y GOMEZ Ltd,17.48,0.0157,-0.1398,-0.4602,Consumer Discretionary,$1.77B,1.77,"Guzman Y GOMEZ Ltd, Sydney",Sydney
+195,GNP,Genusplus Group Ltd,9.74,0,0.2145,2.1318,Industrials,$1.77B,1.77,"Genusplus Group Ltd, Perth",Perth
+196,MGH,Maas Group Holdings Ltd,4.83,-0.0143,0.0126,0.1078,Industrials,$1.75B,1.75,"Maas Group Holdings Ltd, Dubbo",Dubbo
+197,RYM,Ryman Healthcare Ltd,1.71,-0.0058,0.0556,-0.25,Health Care,$1.74B,1.74,"Ryman Healthcare Ltd, Christchurch",Christchurch
+198,ZIM,Zimplats Holdings Ltd,15.71,0.0195,-0.1603,0.4282,Materials,$1.69B,1.69,"Zimplats Holdings Ltd, Harare",Harare
+199,GLF,Gemlife Communities Group,4.32,-0.0204,-0.0421,0.0385,Real Estate,$1.64B,1.64,"Gemlife Communities Group, Gold Coast",Gold Coast
+200,BRE,Brazilian Rare EARTHS Ltd,5.84,-0.0051,0.3183,2.1064,Materials,$1.64B,1.64,"Brazilian Rare EARTHS Ltd, Sydney",Sydney
