@@ -1,0 +1,156 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Scatter plot of ASX 200 company market capitalisation versus one-year return.",
+  "width": 760,
+  "height": 460,
+  "data": {
+    "url": "data/asx200_companies.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(replace(replace(datum['Mkt Cap'], '$', ''), 'B', ''))",
+      "as": "marketCapB"
+    },
+    {
+      "calculate": "toNumber(datum['1 Year'])",
+      "as": "oneYearReturn"
+    },
+    {
+      "filter": "isValid(datum.marketCapB) && isValid(datum.oneYearReturn)"
+    },
+    {
+      "filter": "datum.oneYearReturn >= -1 && datum.oneYearReturn <= 3"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#999999",
+        "strokeDash": [4, 4]
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 90,
+        "opacity": 0.8,
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": {
+          "field": "marketCapB",
+          "type": "quantitative",
+          "title": "Market cap ($B, log scale)",
+          "scale": {
+            "type": "log"
+          },
+          "axis": {
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "grid": true
+          }
+        },
+        "y": {
+          "field": "oneYearReturn",
+          "type": "quantitative",
+          "title": "One-year return",
+          "scale": {
+            "domain": [-1, 3]
+          },
+          "axis": {
+            "format": ".0%",
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "grid": true
+          }
+        },
+        "color": {
+          "field": "Sector",
+          "type": "nominal",
+          "title": "Sector",
+          "scale": {
+            "domain": [
+              "Financials",
+              "Materials",
+              "Industrials",
+              "Consumer Discretionary",
+              "Health Care",
+              "Real Estate",
+              "Energy",
+              "Communication Services",
+              "Consumer Staples",
+              "Utilities",
+              "Information Technology"
+            ],
+            "range": [
+              "#4e79a7",
+              "#f28e2b",
+              "#e15759",
+              "#76b7b2",
+              "#59a14f",
+              "#edc948",
+              "#b07aa1",
+              "#ff9da7",
+              "#9c755f",
+              "#bab0ab",
+              "#6f4e7c"
+            ]
+          },
+          "legend": {
+            "title": "Sector",
+            "orient": "right",
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "symbolSize": 140,
+            "rowPadding": 6
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Company",
+            "type": "nominal",
+            "title": "Company"
+          },
+          {
+            "field": "Sector",
+            "type": "nominal",
+            "title": "Sector"
+          },
+          {
+            "field": "marketCapB",
+            "type": "quantitative",
+            "title": "Market cap ($B)",
+            "format": ".1f"
+          },
+          {
+            "field": "oneYearReturn",
+            "type": "quantitative",
+            "title": "One-year return",
+            "format": ".1%"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}
