@@ -1,0 +1,205 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "ASX 200 sector makeup by total market capitalisation.",
+  "width": 520,
+  "height": 420,
+  "data": {
+    "url": "data/asx200_companies.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(replace(replace(datum['Mkt Cap'], '$', ''), 'B', ''))",
+      "as": "marketCapB"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "marketCapB",
+          "as": "totalMarketCapB"
+        }
+      ],
+      "groupby": ["Sector"]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "totalMarketCapB",
+          "as": "overallMarketCapB"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.totalMarketCapB / datum.overallMarketCapB",
+      "as": "sectorShare"
+    },
+    {
+      "calculate": "format(datum.sectorShare, '.1%')",
+      "as": "sectorShareLabel"
+    },
+    {
+      "calculate": "'$' + format(datum.totalMarketCapB, ',.1f') + 'B'",
+      "as": "sectorMarketCapLabel"
+    },
+    {
+      "calculate": "datum.Sector + ' (' + datum.sectorMarketCapLabel + ')'",
+      "as": "sectorLegendLabel"
+    },
+    {
+      "calculate": "'$' + format(datum.overallMarketCapB, ',.1f') + 'B'",
+      "as": "overallLabel"
+    },
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "rowNum"
+        }
+      ]
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 80,
+        "outerRadius": 180
+      },
+      "encoding": {
+        "theta": {
+          "field": "totalMarketCapB",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "sectorLegendLabel",
+          "type": "nominal",
+          "title": "Sector market cap",
+          "sort": {
+            "field": "totalMarketCapB",
+            "order": "descending"
+          },
+          "scale": {
+            "domain": [
+              "Financials ($933.8B)",
+              "Materials ($746.6B)",
+              "Industrials ($219.0B)",
+              "Consumer Discretionary ($171.6B)",
+              "Health Care ($170.5B)",
+              "Real Estate ($157.2B)",
+              "Energy ($129.8B)",
+              "Communication Services ($118.2B)",
+              "Consumer Staples ($89.1B)",
+              "Utilities ($61.2B)",
+              "Information Technology ($61.1B)"
+            ],
+            "range": [
+              "#4e79a7",
+              "#f28e2b",
+              "#e15759",
+              "#76b7b2",
+              "#59a14f",
+              "#edc948",
+              "#b07aa1",
+              "#ff9da7",
+              "#9c755f",
+              "#bab0ab",
+              "#6f4e7c"
+            ]
+          },
+          "legend": {
+            "offset": 25,
+            "labelFontSize": 13,
+            "titleFontSize": 14,
+            "symbolSize": 180,
+            "rowPadding": 10,
+            "labelLimit": 380
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Sector",
+            "type": "nominal",
+            "title": "Sector"
+          },
+          {
+            "field": "totalMarketCapB",
+            "type": "quantitative",
+            "title": "Total market cap ($B)",
+            "format": ".1f"
+          },
+          {
+            "field": "sectorShare",
+            "type": "quantitative",
+            "title": "Share of ASX 200 market cap",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rowNum == 1"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Arial",
+        "fontSize": 16,
+        "fontWeight": "bold",
+        "align": "center",
+        "baseline": "middle",
+        "color": "#444444"
+      },
+      "encoding": {
+        "x": {
+          "value": 260
+        },
+        "y": {
+          "value": 195
+        },
+        "text": {
+          "value": "Total Mkt Cap"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rowNum == 1"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Arial",
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "align": "center",
+        "baseline": "middle",
+        "color": "#111111"
+      },
+      "encoding": {
+        "x": {
+          "value": 260
+        },
+        "y": {
+          "value": 222
+        },
+        "text": {
+          "field": "overallLabel",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}
