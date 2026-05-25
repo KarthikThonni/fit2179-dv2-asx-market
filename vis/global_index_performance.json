@@ -3,6 +3,7 @@
   "description": "World map showing one-year stock market growth by country.",
   "width": 680,
   "height": 360,
+  "background": "#fffdf8",
   "projection": {
     "type": "naturalEarth1"
   },
@@ -13,7 +14,7 @@
       },
       "mark": {
         "type": "geoshape",
-        "stroke": "#eeeeee",
+        "stroke": "#e6ded2",
         "strokeWidth": 0.4
       }
     },
@@ -38,19 +39,24 @@
         },
         {
           "filter": "datum['1Y'] == null || datum['1Y'] === ''"
+        },
+        {
+          "calculate": "'No index data available'",
+          "as": "noDataLabel"
         }
       ],
       "mark": {
         "type": "geoshape",
-        "fill": "#b0b7c3",
-        "stroke": "#ffffff",
+        "fill": "#b8c0c7",
+        "stroke": "#fffdf8",
         "strokeWidth": 0.5,
         "opacity": 0.85
       },
       "encoding": {
         "tooltip": [
           {
-            "value": "No index data available",
+            "field": "noDataLabel",
+            "type": "nominal",
             "title": "Country"
           }
         ]
@@ -85,7 +91,7 @@
       ],
       "mark": {
         "type": "geoshape",
-        "stroke": "#ffffff",
+        "stroke": "#fffdf8",
         "strokeWidth": 0.7
       },
       "encoding": {
@@ -95,12 +101,16 @@
           "title": "One-year return",
           "scale": {
             "domain": [-0.2, 0, 0.2, 0.8],
-            "range": ["#d6604d", "#ffffff", "#bfe7cc", "#2e8b57"],
+            "range": ["#d95f4a", "#fffdf8", "#bfe7cc", "#2f8f68"],
             "clamp": true
           },
           "legend": {
             "title": "One-year return",
-            "format": ".0%"
+            "format": ".0%",
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "labelColor": "#243447",
+            "titleColor": "#102033"
           }
         },
         "tooltip": [
@@ -124,8 +134,8 @@
       },
       "mark": {
         "type": "rect",
-        "fill": "#b0b7c3",
-        "stroke": "#888888"
+        "fill": "#b8c0c7",
+        "stroke": "#64748b"
       },
       "encoding": {
         "x": {
@@ -156,7 +166,9 @@
         "baseline": "middle",
         "dx": 18,
         "fontSize": 11,
-        "color": "#333333"
+        "font": "Inter",
+        "fontWeight": "600",
+        "color": "#243447"
       },
       "encoding": {
         "x": {
@@ -176,10 +188,10 @@
       "stroke": null
     },
     "legend": {
-      "labelFont": "Arial",
-      "titleFont": "Arial",
-      "labelFontSize": 11,
-      "titleFontSize": 12
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelColor": "#243447",
+      "titleColor": "#102033"
     }
   }
 }

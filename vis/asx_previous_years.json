@@ -20,7 +20,7 @@
     {
       "mark": {
         "type": "bar",
-        "cornerRadiusEnd": 3
+        "cornerRadiusEnd": 4
       },
       "encoding": {
         "x": {
@@ -31,7 +31,11 @@
             "domain": false,
             "ticks": false,
             "labelAngle": 0,
-            "labelPadding": 4
+            "labelPadding": 4,
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "labelColor": "#243447",
+            "titleColor": "#102033"
           }
         },
         "y": {
@@ -43,12 +47,16 @@
           },
           "axis": {
             "format": ".0%",
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "labelColor": "#243447",
+            "titleColor": "#102033",
             "gridColor": {
               "condition": {
                 "test": "datum.value === 0",
-                "value": "black"
+                "value": "#102033"
               },
-              "value": "#ddd"
+              "value": "#e6ded2"
             }
           }
         },
@@ -57,13 +65,15 @@
           "type": "quantitative",
           "scale": {
             "domain": [-0.05, 0, 0.25],
-            "range": ["#c0392b", "#d9d9d9", "#2e8b57"]
+            "range": ["#d95f4a", "#e6ded2", "#2f8f68"]
           },
           "legend": {
             "title": "Return",
             "orient": "top",
             "offset": 10,
-            "format": ".0%"
+            "format": ".0%",
+            "labelFontSize": 11,
+            "titleFontSize": 12
           }
         },
         "tooltip": [
@@ -86,7 +96,7 @@
         "type": "rule",
         "strokeDash": [6, 4],
         "strokeWidth": 2,
-        "color": "#111111"
+        "color": "#102033"
       },
       "encoding": {
         "y": {
@@ -105,7 +115,7 @@
         "dy": -6,
         "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#111111"
+        "color": "#102033"
       },
       "encoding": {
         "x": {
@@ -133,7 +143,8 @@
         "baseline": "bottom",
         "dy": -5,
         "fontSize": 11,
-        "color": "#111111"
+        "fontWeight": "600",
+        "color": "#102033"
       },
       "encoding": {
         "x": {
@@ -161,7 +172,8 @@
         "baseline": "top",
         "dy": 5,
         "fontSize": 11,
-        "color": "#111111"
+        "fontWeight": "600",
+        "color": "#102033"
       },
       "encoding": {
         "x": {
@@ -183,8 +195,16 @@
       "stroke": null
     },
     "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial"
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "domainColor": "#b8c0c7",
+      "tickColor": "#b8c0c7"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelColor": "#243447",
+      "titleColor": "#102033"
     }
   }
 }

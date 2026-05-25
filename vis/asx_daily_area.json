@@ -8,7 +8,7 @@
   },
   "transform": [
     {
-      "calculate": "timeParse(datum.Date, '%d/%m/%Y')",
+      "calculate": "timeParse(datum.Date, '%d/%m/%Y') != null ? timeParse(datum.Date, '%d/%m/%Y') : timeParse(datum.Date, '%d/%m/%y')",
       "as": "date"
     },
     {
@@ -24,8 +24,8 @@
       "mark": {
         "type": "area",
         "line": {
-          "color": "#2e8b57",
-          "strokeWidth": 2
+          "color": "#2f8f68",
+          "strokeWidth": 2.5
         },
         "color": {
           "x1": 1,
@@ -36,11 +36,11 @@
           "stops": [
             {
               "offset": 0,
-              "color": "white"
+              "color": "#fffdf8"
             },
             {
               "offset": 1,
-              "color": "#2e8b57"
+              "color": "#2f8f68"
             }
           ]
         },
@@ -55,6 +55,8 @@
             "format": "%b %Y",
             "labelFontSize": 12,
             "titleFontSize": 13,
+            "labelColor": "#243447",
+            "titleColor": "#102033",
             "grid": false
           }
         },
@@ -68,7 +70,10 @@
           "axis": {
             "labelFontSize": 12,
             "titleFontSize": 13,
-            "grid": true
+            "labelColor": "#243447",
+            "titleColor": "#102033",
+            "grid": true,
+            "gridColor": "#e6ded2"
           }
         },
         "y2": {
@@ -95,7 +100,7 @@
         "values": [
           {
             "eventDate": "21/11/2025",
-            "eventValue": 8416.50,
+            "eventValue": 8416.5,
             "labelY": 9480,
             "eventLabel": "Tech and banks sell-off"
           },
@@ -116,8 +121,8 @@
       "mark": {
         "type": "rule",
         "strokeDash": [4, 4],
-        "strokeWidth": 1.5,
-        "color": "#c0392b"
+        "strokeWidth": 1.6,
+        "color": "#d95f4a"
       },
       "encoding": {
         "x": {
@@ -138,7 +143,7 @@
         "values": [
           {
             "eventDate": "21/11/2025",
-            "eventValue": 8416.50,
+            "eventValue": 8416.5,
             "labelY": 9480,
             "eventLabel": "Tech and banks sell-off"
           },
@@ -159,10 +164,10 @@
       "mark": {
         "type": "point",
         "filled": true,
-        "size": 95,
-        "color": "#c0392b",
-        "stroke": "white",
-        "strokeWidth": 1.5
+        "size": 100,
+        "color": "#d95f4a",
+        "stroke": "#fffdf8",
+        "strokeWidth": 1.6
       },
       "encoding": {
         "x": {
@@ -199,7 +204,7 @@
         "values": [
           {
             "eventDate": "21/11/2025",
-            "eventValue": 8416.50,
+            "eventValue": 8416.5,
             "labelY": 9480,
             "eventLabel": "Tech and banks sell-off"
           },
@@ -223,7 +228,7 @@
         "baseline": "bottom",
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#8e2c22",
+        "color": "#d95f4a",
         "dy": -4
       },
       "encoding": {
@@ -247,8 +252,10 @@
       "stroke": null
     },
     "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial"
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "domainColor": "#b8c0c7",
+      "tickColor": "#b8c0c7"
     }
   }
 }

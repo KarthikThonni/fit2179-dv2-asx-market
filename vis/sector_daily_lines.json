@@ -8,7 +8,7 @@
   },
   "transform": [
     {
-      "calculate": "timeParse(datum.Date, '%d/%m/%Y')",
+      "calculate": "timeParse(datum.Date, '%d/%m/%Y') != null ? timeParse(datum.Date, '%d/%m/%Y') : timeParse(datum.Date, '%d/%m/%y')",
       "as": "date"
     },
     {
@@ -82,7 +82,11 @@
         "format": "%b %Y",
         "labelFontSize": 12,
         "titleFontSize": 13,
-        "grid": false
+        "labelColor": "#243447",
+        "titleColor": "#102033",
+        "grid": false,
+        "domainColor": "#b8c0c7",
+        "tickColor": "#b8c0c7"
       }
     },
     "y": {
@@ -93,7 +97,12 @@
         "format": ".0%",
         "labelFontSize": 12,
         "titleFontSize": 13,
-        "grid": true
+        "labelColor": "#243447",
+        "titleColor": "#102033",
+        "grid": true,
+        "gridColor": "#e6ded2",
+        "domainColor": "#b8c0c7",
+        "tickColor": "#b8c0c7"
       }
     },
     "tooltip": [
@@ -133,9 +142,12 @@
         "type": "line",
         "point": {
           "filled": true,
-          "size": 45
+          "size": 45,
+          "stroke": "#fffdf8",
+          "strokeWidth": 0.8
         },
-        "strokeWidth": 2
+        "strokeWidth": 2,
+        "opacity": 0.82
       },
       "encoding": {
         "color": {
@@ -158,24 +170,27 @@
               "Information Technology (XIJ)"
             ],
             "range": [
-              "#111111",
-              "#4e79a7",
-              "#f28e2b",
-              "#e15759",
-              "#76b7b2",
-              "#59a14f",
-              "#edc948",
-              "#b07aa1",
-              "#ff9da7",
-              "#9c755f",
-              "#bab0ab",
-              "#6f4e7c"
+              "#102033",
+              "#547aa5",
+              "#d58a3a",
+              "#d95f4a",
+              "#62a99b",
+              "#4f9a64",
+              "#d6b44c",
+              "#9c6b9e",
+              "#e88b9a",
+              "#9a735c",
+              "#9aa3a8",
+              "#705780"
             ]
           },
           "legend": {
             "labelFontSize": 11,
             "titleFontSize": 12,
-            "symbolSize": 120
+            "symbolSize": 120,
+            "rowPadding": 5,
+            "labelColor": "#243447",
+            "titleColor": "#102033"
           }
         }
       }
@@ -190,11 +205,14 @@
         "type": "line",
         "point": {
           "filled": true,
-          "size": 55
+          "size": 60,
+          "color": "#102033",
+          "stroke": "#fffdf8",
+          "strokeWidth": 1
         },
         "strokeWidth": 4,
         "strokeDash": [6, 4],
-        "color": "#111111"
+        "color": "#102033"
       }
     }
   ],
@@ -203,12 +221,16 @@
       "stroke": null
     },
     "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial"
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "domainColor": "#b8c0c7",
+      "tickColor": "#b8c0c7"
     },
     "legend": {
-      "labelFont": "Arial",
-      "titleFont": "Arial"
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelColor": "#243447",
+      "titleColor": "#102033"
     }
   }
 }

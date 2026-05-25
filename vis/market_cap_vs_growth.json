@@ -26,7 +26,7 @@
     {
       "mark": {
         "type": "rule",
-        "color": "#777777",
+        "color": "#c48a3a",
         "strokeDash": [4, 4],
         "strokeWidth": 1.5
       },
@@ -41,9 +41,9 @@
         "type": "point",
         "filled": true,
         "size": 85,
-        "opacity": 0.8,
-        "stroke": "white",
-        "strokeWidth": 0.8
+        "opacity": 0.82,
+        "stroke": "#fffdf8",
+        "strokeWidth": 0.9
       },
       "encoding": {
         "x": {
@@ -56,6 +56,8 @@
           "axis": {
             "labelFontSize": 12,
             "titleFontSize": 13,
+            "labelColor": "#243447",
+            "titleColor": "#102033",
             "grid": false
           }
         },
@@ -70,6 +72,8 @@
             "format": ".0%",
             "labelFontSize": 12,
             "titleFontSize": 13,
+            "labelColor": "#243447",
+            "titleColor": "#102033",
             "grid": false
           }
         },
@@ -92,17 +96,17 @@
               "Information Technology"
             ],
             "range": [
-              "#4e79a7",
-              "#f28e2b",
-              "#e15759",
-              "#76b7b2",
-              "#59a14f",
-              "#edc948",
-              "#b07aa1",
-              "#ff9da7",
-              "#9c755f",
-              "#bab0ab",
-              "#6f4e7c"
+              "#547aa5",
+              "#d58a3a",
+              "#d95f4a",
+              "#62a99b",
+              "#4f9a64",
+              "#d6b44c",
+              "#9c6b9e",
+              "#e88b9a",
+              "#9a735c",
+              "#9aa3a8",
+              "#705780"
             ]
           },
           "legend": {
@@ -111,7 +115,9 @@
             "labelFontSize": 11,
             "titleFontSize": 12,
             "symbolSize": 140,
-            "rowPadding": 6
+            "rowPadding": 6,
+            "labelColor": "#243447",
+            "titleColor": "#102033"
           }
         },
         "tooltip": [
@@ -146,14 +152,18 @@
       "stroke": null
     },
     "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial",
+      "labelFont": "Inter",
+      "titleFont": "Inter",
       "domain": true,
-      "ticks": true
+      "ticks": true,
+      "domainColor": "#b8c0c7",
+      "tickColor": "#b8c0c7"
     },
     "legend": {
-      "labelFont": "Arial",
-      "titleFont": "Arial"
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelColor": "#243447",
+      "titleColor": "#102033"
     }
   }
 }

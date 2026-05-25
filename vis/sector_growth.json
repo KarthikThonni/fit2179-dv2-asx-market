@@ -31,9 +31,14 @@
       "axis": {
         "format": ".0%",
         "grid": true,
+        "gridColor": "#e6ded2",
         "tickCount": 7,
         "labelFontSize": 12,
-        "titleFontSize": 13
+        "titleFontSize": 13,
+        "labelColor": "#243447",
+        "titleColor": "#102033",
+        "domainColor": "#b8c0c7",
+        "tickColor": "#b8c0c7"
       }
     },
     "y": {
@@ -59,7 +64,10 @@
       },
       "axis": {
         "labelFontSize": 12,
-        "labelLimit": 220
+        "labelLimit": 220,
+        "labelColor": "#243447",
+        "domain": false,
+        "ticks": false
       }
     },
     "color": {
@@ -81,17 +89,17 @@
           "Information Technology"
         ],
         "range": [
-          "#4e79a7",
-          "#f28e2b",
-          "#e15759",
-          "#76b7b2",
-          "#59a14f",
-          "#edc948",
-          "#b07aa1",
-          "#ff9da7",
-          "#9c755f",
-          "#bab0ab",
-          "#6f4e7c"
+          "#547aa5",
+          "#d58a3a",
+          "#d95f4a",
+          "#62a99b",
+          "#4f9a64",
+          "#d6b44c",
+          "#9c6b9e",
+          "#e88b9a",
+          "#9a735c",
+          "#9aa3a8",
+          "#705780"
         ]
       }
     },
@@ -119,8 +127,10 @@
       "stroke": null
     },
     "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial"
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "domainColor": "#b8c0c7",
+      "tickColor": "#b8c0c7"
     }
   }
 }

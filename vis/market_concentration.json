@@ -54,8 +54,9 @@
     {
       "mark": {
         "type": "bar",
-        "opacity": 0.85,
-        "color": "#6f92b8"
+        "opacity": 0.88,
+        "color": "#547aa5",
+        "cornerRadiusEnd": 2
       },
       "encoding": {
         "x": {
@@ -65,7 +66,11 @@
           "axis": {
             "labelAngle": 0,
             "labelFontSize": 10,
-            "titleFontSize": 13
+            "titleFontSize": 13,
+            "labelColor": "#243447",
+            "titleColor": "#102033",
+            "domain": false,
+            "ticks": false
           }
         },
         "y": {
@@ -75,7 +80,10 @@
           "axis": {
             "labelFontSize": 12,
             "titleFontSize": 13,
-            "grid": true
+            "labelColor": "#243447",
+            "titleColor": "#102033",
+            "grid": true,
+            "gridColor": "#e6ded2"
           }
         },
         "tooltip": [
@@ -106,12 +114,14 @@
     {
       "mark": {
         "type": "line",
-        "color": "#d62828",
+        "color": "#d95f4a",
         "strokeWidth": 3,
         "point": {
           "filled": true,
           "size": 45,
-          "color": "#d62828"
+          "color": "#d95f4a",
+          "stroke": "#fffdf8",
+          "strokeWidth": 1
         }
       },
       "encoding": {
@@ -131,6 +141,8 @@
             "format": ".0%",
             "labelFontSize": 12,
             "titleFontSize": 13,
+            "labelColor": "#243447",
+            "titleColor": "#102033",
             "labelPadding": 8,
             "titlePadding": 18,
             "grid": false
@@ -167,8 +179,10 @@
       "stroke": null
     },
     "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial"
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "domainColor": "#b8c0c7",
+      "tickColor": "#b8c0c7"
     }
   }
 }

@@ -3,6 +3,7 @@
   "description": "Bubble map of ASX 200 company head office locations by state.",
   "width": 760,
   "height": 520,
+  "background": "#fffdf8",
   "projection": {
     "type": "mercator",
     "center": [136, -27],
@@ -15,9 +16,9 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#f2f2f2",
-        "stroke": "#bdbdbd",
-        "strokeWidth": 1
+        "fill": "#f3eadc",
+        "stroke": "#c8b89f",
+        "strokeWidth": 1.1
       }
     },
     {
@@ -48,9 +49,9 @@
       ],
       "mark": {
         "type": "circle",
-        "opacity": 0.85,
-        "stroke": "white",
-        "strokeWidth": 1.5
+        "opacity": 0.88,
+        "stroke": "#fffdf8",
+        "strokeWidth": 1.6
       },
       "encoding": {
         "longitude": {
@@ -72,15 +73,18 @@
             "title": "Number of companies",
             "orient": "right",
             "labelFontSize": 11,
-            "titleFontSize": 12
+            "titleFontSize": 12,
+            "labelColor": "#243447",
+            "titleColor": "#102033",
+            "symbolStrokeColor": "#102033"
           }
         },
         "color": {
           "condition": {
             "test": "datum.HeadOfficeState == 'Outside Australia'",
-            "value": "#d95f02"
+            "value": "#c48a3a"
           },
-          "value": "#4e79a7",
+          "value": "#2f8f68",
           "legend": null
         },
         "tooltip": [
@@ -129,11 +133,12 @@
       ],
       "mark": {
         "type": "text",
+        "font": "Inter",
         "fontSize": 11,
         "fontWeight": "bold",
         "align": "center",
         "baseline": "middle",
-        "color": "#222222"
+        "color": "#102033"
       },
       "encoding": {
         "longitude": {
@@ -156,8 +161,10 @@
       "stroke": null
     },
     "legend": {
-      "labelFont": "Arial",
-      "titleFont": "Arial"
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelColor": "#243447",
+      "titleColor": "#102033"
     }
   }
 }

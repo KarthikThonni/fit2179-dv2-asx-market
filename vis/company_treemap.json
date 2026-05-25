@@ -107,7 +107,7 @@
       "name": "returnColour",
       "type": "linear",
       "domain": [-1, 0, 3],
-      "range": ["#c0392b", "#eeeeee", "#2e8b57"],
+      "range": ["#d95f4a", "#f3eadc", "#2f8f68"],
       "clamp": true
     }
   ],
@@ -118,10 +118,13 @@
       "title": "One-year return",
       "format": ".0%",
       "orient": "right",
-      "titleFont": "Arial",
-      "labelFont": "Arial",
+      "titleFont": "Inter",
+      "labelFont": "Inter",
       "titleFontSize": 12,
-      "labelFontSize": 11
+      "labelFontSize": 11,
+      "titleColor": "#102033",
+      "labelColor": "#243447",
+      "gradientLength": 180
     }
   ],
 
@@ -134,7 +137,7 @@
       "encode": {
         "enter": {
           "stroke": {
-            "value": "#ffffff"
+            "value": "#fffdf8"
           },
           "strokeWidth": {
             "value": 1
@@ -187,10 +190,13 @@
             "value": "transparent"
           },
           "stroke": {
-            "value": "#333333"
+            "value": "#102033"
           },
           "strokeWidth": {
             "value": 1.2
+          },
+          "strokeOpacity": {
+            "value": 0.75
           }
         }
       }
@@ -204,7 +210,7 @@
       "encode": {
         "enter": {
           "font": {
-            "value": "Arial"
+            "value": "Inter"
           },
           "fontSize": {
             "value": 12
@@ -213,7 +219,7 @@
             "value": "bold"
           },
           "fill": {
-            "value": "#111111"
+            "value": "#102033"
           },
           "align": {
             "value": "left"
@@ -253,13 +259,16 @@
       "encode": {
         "enter": {
           "font": {
-            "value": "Arial"
+            "value": "Inter"
           },
           "fontSize": {
             "value": 10
           },
+          "fontWeight": {
+            "value": "600"
+          },
           "fill": {
-            "value": "#111111"
+            "value": "#102033"
           },
           "align": {
             "value": "center"

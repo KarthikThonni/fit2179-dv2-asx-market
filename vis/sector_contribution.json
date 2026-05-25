@@ -64,7 +64,12 @@
           "axis": {
             "labelFontSize": 12,
             "titleFontSize": 13,
-            "grid": true
+            "labelColor": "#243447",
+            "titleColor": "#102033",
+            "grid": true,
+            "gridColor": "#e6ded2",
+            "domainColor": "#b8c0c7",
+            "tickColor": "#b8c0c7"
           }
         },
         "y": {
@@ -87,15 +92,18 @@
           "axis": {
             "labelFontSize": 12,
             "labelLimit": 220,
-            "labelPadding": 8
+            "labelPadding": 8,
+            "labelColor": "#243447",
+            "domain": false,
+            "ticks": false
           }
         },
         "color": {
           "condition": {
             "test": "datum.sectorContributionB < 0",
-            "value": "#c0392b"
+            "value": "#d95f4a"
           },
-          "value": "#2e8b57",
+          "value": "#2f8f68",
           "legend": null
         }
       }
@@ -105,8 +113,8 @@
         "type": "point",
         "filled": true,
         "size": 190,
-        "stroke": "white",
-        "strokeWidth": 1
+        "stroke": "#fffdf8",
+        "strokeWidth": 1.2
       },
       "encoding": {
         "x": {
@@ -136,9 +144,9 @@
         "color": {
           "condition": {
             "test": "datum.sectorContributionB < 0",
-            "value": "#c0392b"
+            "value": "#d95f4a"
           },
-          "value": "#2e8b57",
+          "value": "#2f8f68",
           "legend": null
         },
         "tooltip": [
@@ -180,7 +188,7 @@
         "dx": 8,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#222222"
+        "color": "#102033"
       },
       "encoding": {
         "x": {
@@ -225,7 +233,7 @@
         "dx": -10,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#222222"
+        "color": "#102033"
       },
       "encoding": {
         "x": {
@@ -263,8 +271,10 @@
       "stroke": null
     },
     "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial"
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "domainColor": "#b8c0c7",
+      "tickColor": "#b8c0c7"
     }
   }
 }
