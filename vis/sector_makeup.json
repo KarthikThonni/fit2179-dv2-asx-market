@@ -71,6 +71,11 @@
           "field": "totalMarketCapB",
           "type": "quantitative"
         },
+        "order": {
+          "field": "totalMarketCapB",
+          "type": "quantitative",
+          "sort": "descending"
+        },
         "color": {
           "field": "sectorLegendLabel",
           "type": "nominal",

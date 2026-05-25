@@ -26,8 +26,9 @@
     {
       "mark": {
         "type": "rule",
-        "color": "#999999",
-        "strokeDash": [4, 4]
+        "color": "#777777",
+        "strokeDash": [4, 4],
+        "strokeWidth": 1.5
       },
       "encoding": {
         "y": {
@@ -39,7 +40,7 @@
       "mark": {
         "type": "point",
         "filled": true,
-        "size": 90,
+        "size": 85,
         "opacity": 0.8,
         "stroke": "white",
         "strokeWidth": 0.8
@@ -55,7 +56,7 @@
           "axis": {
             "labelFontSize": 12,
             "titleFontSize": 13,
-            "grid": true
+            "grid": false
           }
         },
         "y": {
@@ -69,7 +70,7 @@
             "format": ".0%",
             "labelFontSize": 12,
             "titleFontSize": 13,
-            "grid": true
+            "grid": false
           }
         },
         "color": {
@@ -146,7 +147,9 @@
     },
     "axis": {
       "labelFont": "Arial",
-      "titleFont": "Arial"
+      "titleFont": "Arial",
+      "domain": true,
+      "ticks": true
     },
     "legend": {
       "labelFont": "Arial",

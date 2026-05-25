@@ -1,0 +1,270 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Lollipop chart showing estimated ASX 200 sector contribution to one-year growth.",
+  "width": 820,
+  "height": 420,
+  "data": {
+    "url": "data/asx200_companies.csv"
+  },
+  "transform": [
+    {
+      "calculate": "isValid(datum['MktCap B']) ? toNumber(datum['MktCap B']) : isValid(datum.MktCapB) ? toNumber(datum.MktCapB) : toNumber(replace(replace(datum['Mkt Cap'], '$', ''), 'B', ''))",
+      "as": "marketCapB"
+    },
+    {
+      "calculate": "isValid(datum['1 Year']) ? toNumber(datum['1 Year']) : toNumber(datum['1Year'])",
+      "as": "oneYearReturn"
+    },
+    {
+      "filter": "isValid(datum.marketCapB) && isValid(datum.oneYearReturn)"
+    },
+    {
+      "calculate": "datum.marketCapB * datum.oneYearReturn",
+      "as": "companyContributionB"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "companyContributionB",
+          "as": "sectorContributionB"
+        },
+        {
+          "op": "sum",
+          "field": "marketCapB",
+          "as": "sectorMarketCapB"
+        },
+        {
+          "op": "count",
+          "field": "Company",
+          "as": "companyCount"
+        }
+      ],
+      "groupby": ["Sector"]
+    },
+    {
+      "calculate": "format(datum.sectorContributionB, ',.1f') + 'B'",
+      "as": "contributionLabel"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 4
+      },
+      "encoding": {
+        "x": {
+          "field": "sectorContributionB",
+          "type": "quantitative",
+          "title": "Estimated contribution to market value ($B)",
+          "scale": {
+            "domain": [-80, 560]
+          },
+          "axis": {
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "grid": true
+          }
+        },
+        "y": {
+          "field": "Sector",
+          "type": "ordinal",
+          "title": null,
+          "sort": [
+            "Materials",
+            "Energy",
+            "Financials",
+            "Industrials",
+            "Utilities",
+            "Consumer Staples",
+            "Communication Services",
+            "Real Estate",
+            "Information Technology",
+            "Consumer Discretionary",
+            "Health Care"
+          ],
+          "axis": {
+            "labelFontSize": 12,
+            "labelLimit": 220,
+            "labelPadding": 8
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.sectorContributionB < 0",
+            "value": "#c0392b"
+          },
+          "value": "#2e8b57",
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 190,
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "sectorContributionB",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-80, 560]
+          }
+        },
+        "y": {
+          "field": "Sector",
+          "type": "ordinal",
+          "sort": [
+            "Materials",
+            "Energy",
+            "Financials",
+            "Industrials",
+            "Utilities",
+            "Consumer Staples",
+            "Communication Services",
+            "Real Estate",
+            "Information Technology",
+            "Consumer Discretionary",
+            "Health Care"
+          ]
+        },
+        "color": {
+          "condition": {
+            "test": "datum.sectorContributionB < 0",
+            "value": "#c0392b"
+          },
+          "value": "#2e8b57",
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "Sector",
+            "type": "nominal",
+            "title": "Sector"
+          },
+          {
+            "field": "sectorContributionB",
+            "type": "quantitative",
+            "title": "Estimated contribution ($B)",
+            "format": ".1f"
+          },
+          {
+            "field": "sectorMarketCapB",
+            "type": "quantitative",
+            "title": "Sector market cap ($B)",
+            "format": ".1f"
+          },
+          {
+            "field": "companyCount",
+            "type": "quantitative",
+            "title": "Number of companies"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.sectorContributionB >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#222222"
+      },
+      "encoding": {
+        "x": {
+          "field": "sectorContributionB",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-80, 560]
+          }
+        },
+        "y": {
+          "field": "Sector",
+          "type": "ordinal",
+          "sort": [
+            "Materials",
+            "Energy",
+            "Financials",
+            "Industrials",
+            "Utilities",
+            "Consumer Staples",
+            "Communication Services",
+            "Real Estate",
+            "Information Technology",
+            "Consumer Discretionary",
+            "Health Care"
+          ]
+        },
+        "text": {
+          "field": "contributionLabel"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.sectorContributionB < 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -10,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#222222"
+      },
+      "encoding": {
+        "x": {
+          "field": "sectorContributionB",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-80, 560]
+          }
+        },
+        "y": {
+          "field": "Sector",
+          "type": "ordinal",
+          "sort": [
+            "Materials",
+            "Energy",
+            "Financials",
+            "Industrials",
+            "Utilities",
+            "Consumer Staples",
+            "Communication Services",
+            "Real Estate",
+            "Information Technology",
+            "Consumer Discretionary",
+            "Health Care"
+          ]
+        },
+        "text": {
+          "field": "contributionLabel"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

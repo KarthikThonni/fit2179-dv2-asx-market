@@ -1,0 +1,288 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Treemap of ASX 200 companies grouped by sector, sized by market cap and coloured by one-year return.",
+  "width": 760,
+  "height": 500,
+  "padding": 2,
+  "autosize": "none",
+
+  "data": [
+    {
+      "name": "companies",
+      "url": "data/asx200_companies.csv",
+      "format": {
+        "type": "csv"
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "toNumber(replace(replace(datum['Mkt Cap'], '$', ''), 'B', ''))",
+          "as": "marketCapB"
+        },
+        {
+          "type": "formula",
+          "expr": "toNumber(datum['1 Year'])",
+          "as": "oneYearReturn"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum.marketCapB) && isValid(datum.oneYearReturn)"
+        }
+      ]
+    },
+    {
+      "name": "tree",
+      "source": "companies",
+      "transform": [
+        {
+          "type": "nest",
+          "keys": ["Sector"],
+          "generate": true
+        },
+        {
+          "type": "treemap",
+          "field": "marketCapB",
+          "sort": {
+            "field": "marketCapB",
+            "order": "descending"
+          },
+          "round": true,
+          "method": "squarify",
+          "ratio": 1.6,
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sectorNodes",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.children && datum.depth == 1"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.key == 'Consumer Discretionary' ? 'Consumer\\nDiscretionary' : datum.key == 'Communication Services' ? 'Comms\\nServices' : datum.key == 'Consumer Staples' ? 'Consumer\\nStaples' : datum.key == 'Real Estate' ? 'Real\\nEstate' : datum.key == 'Information Technology' ? 'IT' : datum.key",
+          "as": "sectorLabel"
+        }
+      ]
+    },
+    {
+      "name": "companyNodes",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!datum.children && datum.depth == 2"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.x1 - datum.x0",
+          "as": "boxWidth"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.y1 - datum.y0",
+          "as": "boxHeight"
+        },
+        {
+          "type": "formula",
+          "expr": "format(datum.oneYearReturn, '.1%')",
+          "as": "returnLabel"
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "returnColour",
+      "type": "linear",
+      "domain": [-1, 0, 3],
+      "range": ["#c0392b", "#eeeeee", "#2e8b57"],
+      "clamp": true
+    }
+  ],
+
+  "legends": [
+    {
+      "fill": "returnColour",
+      "title": "One-year return",
+      "format": ".0%",
+      "orient": "right",
+      "titleFont": "Arial",
+      "labelFont": "Arial",
+      "titleFontSize": 12,
+      "labelFontSize": 11
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "rect",
+      "from": {
+        "data": "companyNodes"
+      },
+      "encode": {
+        "enter": {
+          "stroke": {
+            "value": "#ffffff"
+          },
+          "strokeWidth": {
+            "value": 1
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "returnColour",
+            "field": "oneYearReturn"
+          },
+          "tooltip": {
+            "signal": "{'Company': datum.Company, 'Sector': datum.Sector, 'Market cap ($B)': format(datum.marketCapB, ',.1f'), 'One-year return': datum.returnLabel}"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "sectorNodes"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "value": "transparent"
+          },
+          "stroke": {
+            "value": "#333333"
+          },
+          "strokeWidth": {
+            "value": 1.2
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "sectorNodes"
+      },
+      "interactive": false,
+      "encode": {
+        "enter": {
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#111111"
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "lineBreak": {
+            "value": "\n"
+          },
+          "lineHeight": {
+            "value": 14
+          }
+        },
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 5"
+          },
+          "y": {
+            "signal": "datum.y0 + 4"
+          },
+          "text": {
+            "field": "sectorLabel"
+          },
+          "fillOpacity": {
+            "signal": "(datum.x1 - datum.x0) > 70 && (datum.y1 - datum.y0) > 28 ? 1 : 0"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "companyNodes"
+      },
+      "interactive": false,
+      "encode": {
+        "enter": {
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fill": {
+            "value": "#111111"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          }
+        },
+        "update": {
+          "x": {
+            "signal": "0.5 * (datum.x0 + datum.x1)"
+          },
+          "y": {
+            "signal": "0.5 * (datum.y0 + datum.y1)"
+          },
+          "text": {
+            "field": "Code"
+          },
+          "fillOpacity": {
+            "signal": "datum.boxWidth > 35 && datum.boxHeight > 20 ? 1 : 0"
+          }
+        }
+      }
+    }
+  ]
+}

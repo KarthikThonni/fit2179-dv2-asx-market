@@ -1,0 +1,214 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Monthly percentage change of ASX sectors and the ASX200 benchmark over time.",
+  "width": 760,
+  "height": 430,
+  "data": {
+    "url": "data/asx_daily_returns.csv"
+  },
+  "transform": [
+    {
+      "calculate": "timeParse(datum.Date, '%d/%m/%Y')",
+      "as": "date"
+    },
+    {
+      "fold": [
+        "ASX200",
+        "Financials (XFJ)",
+        "Materials (XMJ)",
+        "Consumer Discretionary (XDJ)",
+        "Health Care (XHJ)",
+        "Real Estate (XRE)",
+        "Energy (XEJ)",
+        "Industrials (XNJ)",
+        "Communication Services (XTJ)",
+        "Utilities (XUJ)",
+        "Information Technology (XIJ)",
+        "Consumer Staples (XSJ)"
+      ],
+      "as": ["Sector", "SectorIndex"]
+    },
+    {
+      "calculate": "toNumber(datum.SectorIndex)",
+      "as": "sectorValue"
+    },
+    {
+      "filter": "datum.date != null && isFinite(datum.sectorValue)"
+    },
+    {
+      "calculate": "timeFormat(datum.date, '%Y-%m')",
+      "as": "monthKey"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "date",
+          "as": "lastDateOfMonth"
+        }
+      ],
+      "groupby": ["Sector", "monthKey"]
+    },
+    {
+      "filter": "datum.date == datum.lastDateOfMonth"
+    },
+    {
+      "window": [
+        {
+          "op": "first_value",
+          "field": "sectorValue",
+          "as": "startValue"
+        }
+      ],
+      "sort": [
+        {
+          "field": "date",
+          "order": "ascending"
+        }
+      ],
+      "groupby": ["Sector"]
+    },
+    {
+      "calculate": "(datum.sectorValue - datum.startValue) / datum.startValue",
+      "as": "percentChange"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Month",
+      "axis": {
+        "format": "%b %Y",
+        "labelFontSize": 12,
+        "titleFontSize": 13,
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "percentChange",
+      "type": "quantitative",
+      "title": "Percentage change from start",
+      "axis": {
+        "format": ".0%",
+        "labelFontSize": 12,
+        "titleFontSize": 13,
+        "grid": true
+      }
+    },
+    "tooltip": [
+      {
+        "field": "date",
+        "type": "temporal",
+        "title": "Month",
+        "format": "%b %Y"
+      },
+      {
+        "field": "Sector",
+        "type": "nominal",
+        "title": "Series"
+      },
+      {
+        "field": "percentChange",
+        "type": "quantitative",
+        "title": "Change from start",
+        "format": ".1%"
+      },
+      {
+        "field": "sectorValue",
+        "type": "quantitative",
+        "title": "Index level",
+        "format": ".2f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.Sector != 'ASX200'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "point": {
+          "filled": true,
+          "size": 45
+        },
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "Sector",
+          "type": "nominal",
+          "title": "Series",
+          "scale": {
+            "domain": [
+              "ASX200",
+              "Financials (XFJ)",
+              "Materials (XMJ)",
+              "Industrials (XNJ)",
+              "Consumer Discretionary (XDJ)",
+              "Health Care (XHJ)",
+              "Real Estate (XRE)",
+              "Energy (XEJ)",
+              "Communication Services (XTJ)",
+              "Consumer Staples (XSJ)",
+              "Utilities (XUJ)",
+              "Information Technology (XIJ)"
+            ],
+            "range": [
+              "#111111",
+              "#4e79a7",
+              "#f28e2b",
+              "#e15759",
+              "#76b7b2",
+              "#59a14f",
+              "#edc948",
+              "#b07aa1",
+              "#ff9da7",
+              "#9c755f",
+              "#bab0ab",
+              "#6f4e7c"
+            ]
+          },
+          "legend": {
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "symbolSize": 120
+          }
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.Sector == 'ASX200'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "point": {
+          "filled": true,
+          "size": 55
+        },
+        "strokeWidth": 4,
+        "strokeDash": [6, 4],
+        "color": "#111111"
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

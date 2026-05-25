@@ -54,7 +54,8 @@
     {
       "mark": {
         "type": "bar",
-        "opacity": 0.85
+        "opacity": 0.85,
+        "color": "#6f92b8"
       },
       "encoding": {
         "x": {
@@ -75,39 +76,6 @@
             "labelFontSize": 12,
             "titleFontSize": 13,
             "grid": true
-          }
-        },
-        "color": {
-          "field": "Sector",
-          "type": "nominal",
-          "legend": null,
-          "scale": {
-            "domain": [
-              "Financials",
-              "Materials",
-              "Industrials",
-              "Consumer Discretionary",
-              "Health Care",
-              "Real Estate",
-              "Energy",
-              "Communication Services",
-              "Consumer Staples",
-              "Utilities",
-              "Information Technology"
-            ],
-            "range": [
-              "#4e79a7",
-              "#f28e2b",
-              "#e15759",
-              "#76b7b2",
-              "#59a14f",
-              "#edc948",
-              "#b07aa1",
-              "#ff9da7",
-              "#9c755f",
-              "#bab0ab",
-              "#6f4e7c"
-            ]
           }
         },
         "tooltip": [

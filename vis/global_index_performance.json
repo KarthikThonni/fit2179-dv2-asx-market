@@ -1,91 +1,185 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "One-year performance comparison of major stock indexes from countries with the largest equity markets.",
-  "width": 950,
-  "height": {
-    "step": 36
+  "description": "World map showing one-year stock market growth by country.",
+  "width": 680,
+  "height": 360,
+  "projection": {
+    "type": "naturalEarth1"
   },
-  "data": {
-    "url": "data/country_indexes.csv"
-  },
-  "transform": [
+  "layer": [
     {
-      "filter": "indexof(['S&P 500 (United States)', 'Shanghai (China)', 'Nikkei 225 (Japan)', 'FTSE 100 (United Kingdom)', 'S&P/TSX (Canada)', 'Nifty 50 (India)', 'KOSPI (South Korea)', 'Taiwan Weighted (Taiwan)', 'CAC 40 (France)', 'SMI (Switzerland)', 'DAX (Germany)', 'Tadawul All Share (Saudi Arabia)', 'S&P/ASX 200 (Australia)', 'AEX (Netherlands)', 'IBEX 35 (Spain)'], datum.Name) >= 0"
+      "data": {
+        "graticule": true
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#eeeeee",
+        "strokeWidth": 0.4
+      }
     },
     {
-      "calculate": "toNumber(datum['1 Year'])",
-      "as": "oneYearReturn"
-    }
-  ],
-  "mark": {
-    "type": "bar",
-    "cornerRadiusEnd": 3
-  },
-  "encoding": {
-    "y": {
-      "field": "Name",
-      "type": "nominal",
-      "sort": {
-        "field": "oneYearReturn",
-        "op": "max",
-        "order": "descending"
+      "data": {
+        "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
       },
-      "title": null,
-      "axis": {
-        "labelFontSize": 13,
-        "labelLimit": 260,
-        "labelColor": {
-          "expr": "datum.value == 'S&P/ASX 200 (Australia)' ? '#d62828' : '#1f1f1f'"
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {
+              "url": "data/world_index_returns.csv"
+            },
+            "key": "id",
+            "fields": ["Asset", "1Y"]
+          }
         },
-        "labelFontWeight": {
-          "expr": "datum.value == 'S&P/ASX 200 (Australia)' ? 'bold' : 'normal'"
+        {
+          "filter": "datum['1Y'] == null || datum['1Y'] === ''"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#b0b7c3",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.5,
+        "opacity": 0.85
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "value": "No index data available",
+            "title": "Country"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {
+              "url": "data/world_index_returns.csv"
+            },
+            "key": "id",
+            "fields": ["Asset", "1Y"]
+          }
+        },
+        {
+          "filter": "datum['1Y'] != null && datum['1Y'] !== ''"
+        },
+        {
+          "calculate": "toNumber(datum['1Y']) / 100",
+          "as": "oneYearReturn"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "color": {
+          "field": "oneYearReturn",
+          "type": "quantitative",
+          "title": "One-year return",
+          "scale": {
+            "domain": [-0.2, 0, 0.2, 0.8],
+            "range": ["#d6604d", "#ffffff", "#bfe7cc", "#2e8b57"],
+            "clamp": true
+          },
+          "legend": {
+            "title": "One-year return",
+            "format": ".0%"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Asset",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "oneYearReturn",
+            "type": "quantitative",
+            "title": "One-year return",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "rect",
+        "fill": "#b0b7c3",
+        "stroke": "#888888"
+      },
+      "encoding": {
+        "x": {
+          "value": 555
+        },
+        "x2": {
+          "value": 570
+        },
+        "y": {
+          "value": 300
+        },
+        "y2": {
+          "value": 315
         }
       }
     },
-    "x": {
-      "field": "oneYearReturn",
-      "type": "quantitative",
-      "title": "One-year return",
-      "axis": {
-        "format": ".0%",
-        "labelFontSize": 12,
-        "titleFontSize": 13,
-        "grid": true
-      }
-    },
-    "color": {
-      "field": "oneYearReturn",
-      "type": "quantitative",
-      "scale": {
-        "domain": [-0.1, 0, 2],
-        "range": ["#c0392b", "#d9d9d9", "#2e8b57"]
+    {
+      "data": {
+        "values": [
+          {
+            "label": "No index to measure"
+          }
+        ]
       },
-      "legend": {
-        "title": "One-year return",
-        "format": ".0%"
-      }
-    },
-    "tooltip": [
-      {
-        "field": "Name",
-        "type": "nominal",
-        "title": "Index"
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 18,
+        "fontSize": 11,
+        "color": "#333333"
       },
-      {
-        "field": "oneYearReturn",
-        "type": "quantitative",
-        "title": "One-year return",
-        "format": ".1%"
+      "encoding": {
+        "x": {
+          "value": 570
+        },
+        "y": {
+          "value": 307
+        },
+        "text": {
+          "field": "label"
+        }
       }
-    ]
-  },
+    }
+  ],
   "config": {
     "view": {
       "stroke": null
     },
-    "axis": {
+    "legend": {
       "labelFont": "Arial",
-      "titleFont": "Arial"
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12
     }
   }
 }

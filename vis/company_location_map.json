@@ -1,0 +1,163 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bubble map of ASX 200 company head office locations by state.",
+  "width": 760,
+  "height": 520,
+  "projection": {
+    "type": "mercator",
+    "center": [136, -27],
+    "scale": 650
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_states.geojson"
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f2f2f2",
+        "stroke": "#bdbdbd",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "data/asx200_companies.csv"
+      },
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "count",
+              "as": "companyCount"
+            }
+          ],
+          "groupby": ["HeadOfficeState"]
+        },
+        {
+          "calculate": "datum.HeadOfficeState == 'WA' ? 115.86 : datum.HeadOfficeState == 'SA' ? 138.60 : datum.HeadOfficeState == 'QLD' ? 153.03 : datum.HeadOfficeState == 'NSW' ? 151.21 : datum.HeadOfficeState == 'VIC' ? 144.96 : datum.HeadOfficeState == 'Outside Australia' ? 160.5 : null",
+          "as": "longitude"
+        },
+        {
+          "calculate": "datum.HeadOfficeState == 'WA' ? -31.95 : datum.HeadOfficeState == 'SA' ? -34.93 : datum.HeadOfficeState == 'QLD' ? -27.47 : datum.HeadOfficeState == 'NSW' ? -33.87 : datum.HeadOfficeState == 'VIC' ? -37.81 : datum.HeadOfficeState == 'Outside Australia' ? -18.5 : null",
+          "as": "latitude"
+        },
+        {
+          "filter": "datum.longitude != null && datum.latitude != null"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "opacity": 0.85,
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "companyCount",
+          "type": "quantitative",
+          "title": "Number of companies",
+          "scale": {
+            "range": [500, 7000]
+          },
+          "legend": {
+            "title": "Number of companies",
+            "orient": "right",
+            "labelFontSize": 11,
+            "titleFontSize": 12
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.HeadOfficeState == 'Outside Australia'",
+            "value": "#d95f02"
+          },
+          "value": "#4e79a7",
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "HeadOfficeState",
+            "type": "nominal",
+            "title": "Location"
+          },
+          {
+            "field": "companyCount",
+            "type": "quantitative",
+            "title": "Number of companies"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/asx200_companies.csv"
+      },
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "count",
+              "as": "companyCount"
+            }
+          ],
+          "groupby": ["HeadOfficeState"]
+        },
+        {
+          "calculate": "datum.HeadOfficeState == 'WA' ? 115.86 : datum.HeadOfficeState == 'SA' ? 138.60 : datum.HeadOfficeState == 'QLD' ? 153.03 : datum.HeadOfficeState == 'NSW' ? 157.00 : datum.HeadOfficeState == 'VIC' ? 144.96 : datum.HeadOfficeState == 'Outside Australia' ? 160.5 : null",
+          "as": "labelLongitude"
+        },
+        {
+          "calculate": "datum.HeadOfficeState == 'WA' ? -28.8 : datum.HeadOfficeState == 'SA' ? -37.0 : datum.HeadOfficeState == 'QLD' ? -24.2 : datum.HeadOfficeState == 'NSW' ? -35.8 : datum.HeadOfficeState == 'VIC' ? -41.2 : datum.HeadOfficeState == 'Outside Australia' ? -13.8 : null",
+          "as": "labelLatitude"
+        },
+        {
+          "filter": "datum.labelLongitude != null && datum.labelLatitude != null"
+        },
+        {
+          "calculate": "datum.HeadOfficeState + ' (' + datum.companyCount + ')'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "align": "center",
+        "baseline": "middle",
+        "color": "#222222"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "labelLongitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "labelLatitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

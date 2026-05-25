@@ -31,14 +31,28 @@
   <main>
     <section class="chart-section">
       <div class="chart-text">
-        <h2>1. How has Australia performed against the world?</h2>
+        <h2>1. Australia global market comparison</h2>
 
         <p>
-          This chart compares the one-year returns of stock indexes from the top 15 countries by share market capitalisation
+          This world map compares one-year returns using country-based MSCI index tracking ETFs. Green countries recorded stronger returns, red countries recorded weaker returns, and blue-grey countries are not included in the dataset. The colour scale is capped at 80% to keep the comparison readable.
         </p>
       </div>
 
       <div id="global_index_performance" class="chart"></div>
+    </section>
+
+    <section class="chart-section">
+      <div class="chart-text">
+        <h2>2. How did the ASX 200 move day by day?</h2>
+
+        <p>
+          This area chart shows the daily S&amp;P/ASX 200 index level over the past year.
+          The filled area highlights the overall movement of the index, making it easier to see
+          periods of growth, decline and recovery across the year.
+        </p>
+      </div>
+
+      <div id="asx_daily_area" class="chart"></div>
     </section>
 
     <section class="chart-section">
@@ -53,33 +67,32 @@
       <div id="asx_previous_years" class="chart"></div>
     </section>
 
-    <section class="chart-section">
+        <section class="chart-section">
       <div class="chart-text">
         <h2>3. Where are ASX 200 companies based?</h2>
 
         <p>
-          This map will show where ASX 200 company head offices are located across Australia,
-          helping reveal whether company value is concentrated in particular states.
+          This bubble map shows where ASX 200 companies are headquartered. Larger circles
+          represent states with more companies, while a separate bubble shows companies
+          headquartered outside Australia.
         </p>
       </div>
 
-      <div id="company_locations_map" class="chart map-placeholder">
-        <p>Map placeholder — to be added later.</p>
-      </div>
+      <div id="company_locations_map" class="chart"></div>
     </section>
 
     <section class="chart-section">
       <div class="chart-text">
-        <h2>4. Best and worst performing ASX 200 companies</h2>
+        <h2>4. Which companies drive the ASX 200?</h2>
 
         <p>
-          This chart highlights the ten strongest and ten weakest ASX 200 company performers
-          over the past year, showing how individual company results can vary widely even within
-          the same index.
+          This treemap shows all ASX 200 companies grouped by sector. Rectangle size represents
+          market capitalisation, while colour shows one-year return. Green rectangles show growth,
+          red rectangles show loss, and larger rectangles represent higher-value companies.
         </p>
       </div>
 
-      <div id="best_worst_companies" class="chart"></div>
+      <div id="company_treemap" class="chart"></div>
     </section>
     
     <section class="chart-section">
@@ -142,16 +155,30 @@
 
     <section class="chart-section">
       <div class="chart-text">
-        <h2>9. How do sector size and growth compare?</h2>
+        <h2>9. Which sectors contributed most to ASX 200 growth?</h2>
 
         <p>
-          This bubble plot compares each ASX sector’s total market capitalisation with its
-            median one-year return. Bubble size shows how many ASX 200 companies belong to
-          each sector, combining sector size and sector performance in a single view.
+          This lollipop chart estimates each sector’s contribution to ASX 200 growth by combining
+          company market capitalisation with one-year return. Positive values show sectors that
+          added value, while negative values show sectors that reduced overall market value.
         </p>
       </div>
 
-      <div id="sector_size_vs_growth" class="chart"></div>
+      <div id="sector_contribution" class="chart"></div>
+    </section>
+
+    <section class="chart-section">
+      <div class="chart-text">
+        <h2>10. How did ASX sectors move over time?</h2>
+
+        <p>
+          This line chart compares daily ASX sector index movements over the past year.
+          Each sector starts from a similar base, making it easier to compare which sectors
+          rose, fell or stayed relatively stable over time.
+        </p>
+      </div>
+
+      <div id="sector_daily_lines" class="chart"></div>
     </section>
 
   </main>
