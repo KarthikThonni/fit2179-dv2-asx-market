@@ -29,10 +29,16 @@ body {
 .hero,
 header {
   max-width: 1120px;
-  margin: 0 auto;
-  padding: 58px 32px 38px;
-  border-bottom: 1px solid var(--line);
+  margin: 32px auto 0;
+  padding: 54px 42px 42px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
   text-align: center;
+  background:
+    radial-gradient(circle at top left, rgba(196, 138, 58, 0.18), transparent 32%),
+    radial-gradient(circle at top right, rgba(47, 143, 104, 0.12), transparent 30%),
+    rgba(255, 253, 248, 0.72);
+  box-shadow: 0 18px 45px rgba(16, 32, 51, 0.08);
 }
 
 .eyebrow {
@@ -135,7 +141,7 @@ main {
   color: var(--navy);
 }
 
-/* ---------- GLOBAL COMPARISON LAYOUT ---------- */
+/* ---------- GLOBAL COMPARISON ---------- */
 
 .global-row {
   margin: 34px 0 82px;
@@ -164,177 +170,9 @@ main {
   line-height: 1.65;
   color: var(--text);
 }
-/* ---------- SECTION SPLIT LAYOUT ---------- */
 
-.split-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 34px;
-  align-items: start;
-  margin: 36px 0 60px;
-}
+/* ---------- SPLIT ROWS: 66% CHART / 33% TEXT ---------- */
 
-.split-row.reverse {
-  grid-template-columns: 1fr 2fr;
-}
-
-.split-chart {
-  width: 100%;
-  overflow: visible;
-}
-
-.split-text {
-  width: 100%;
-  padding-top: 0;
-}
-
-.split-text h3 {
-  margin: 0 0 10px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--line);
-  font-size: 21px;
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--navy);
-}
-
-.split-text p {
-  margin: 0 0 12px;
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--text);
-}
-
-.chart,
-.vega-embed,
-.vega-embed canvas,
-.vega-embed svg {
-  background: transparent !important;
-}
-
-@media (max-width: 900px) {
-  .split-row,
-  .split-row.reverse {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-}
-
-.feature-text-top {
-  max-width: 820px;
-  margin: 0 auto 24px;
-  text-align: left;
-}
-
-.feature-text-top h3 {
-  margin: 0 0 10px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--line);
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--navy);
-}
-
-.feature-text-top p {
-  margin: 0 0 12px;
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--text);
-}
-
-.feature-chart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ---------- SECTION 03 TREEMAP ALIGNMENT FIX ---------- */
-
-.feature-chart-section {
-  margin: 36px 0 72px;
-}
-
-.feature-text-top {
-  max-width: 820px;
-  margin: 0 0 24px 0;
-  text-align: left;
-}
-
-.feature-text-top h3 {
-  margin: 0 0 10px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--line);
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--navy);
-}
-
-.feature-text-top p {
-  margin: 0 0 12px;
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--text);
-}
-
-.feature-chart {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.feature-chart .vega-embed {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* ---------- CENTRE SECTION 03 TREEMAP ONLY ---------- */
-
-#company_treemap.feature-chart {
-  width: 100%;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center;
-  overflow: visible;
-}
-
-#company_treemap.feature-chart .vega-embed {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: block !important;
-}
-
-/* Keep treemap text left-aligned */
-.feature-text-top {
-  max-width: 820px;
-  margin: 0 0 24px 0;
-  text-align: left;
-}
-
-/* ---------- SECTION 04 FEATURE CHARTS ---------- */
-
-#sector_daily_lines.feature-chart,
-#sector_growth.feature-chart {
-  width: 100%;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center;
-  overflow: visible;
-}
-
-#sector_daily_lines.feature-chart .vega-embed,
-#sector_growth.feature-chart .vega-embed {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: block !important;
-}
-
-/* 66% chart / 33% text rows */
 .split-row {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -360,7 +198,8 @@ main {
   padding-top: 0;
 }
 
-.split-text h3 {
+.split-text h3,
+.feature-text-top h3 {
   margin: 0 0 10px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
@@ -371,29 +210,63 @@ main {
   color: var(--navy);
 }
 
-.split-text p {
+.split-text p,
+.feature-text-top p {
   margin: 0 0 12px;
   font-size: 14px;
   line-height: 1.65;
   color: var(--text);
 }
 
-/* Optional: make split charts slightly smaller if needed */
-#sector_contribution {
-  max-width: 620px;
+/* ---------- FEATURE CHARTS ---------- */
+
+.feature-chart-section {
+  margin: 36px 0 72px;
 }
 
+.feature-text-top {
+  max-width: 820px;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+.feature-chart,
+#company_treemap.feature-chart,
+#sector_daily_lines.feature-chart,
+#sector_growth.feature-chart {
+  width: 100%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  overflow: visible;
+}
+
+.feature-chart .vega-embed,
+#company_treemap.feature-chart .vega-embed,
+#sector_daily_lines.feature-chart .vega-embed,
+#sector_growth.feature-chart .vega-embed {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+/* ---------- SPLIT CHART WIDTH LIMITS ---------- */
+
+#sector_contribution,
 #market_cap_vs_growth {
   max-width: 620px;
 }
 
-/* Remove visible white chart backgrounds */
+/* ---------- VEGA / CHART BACKGROUND ---------- */
+
 .chart,
 .vega-embed,
 .vega-embed canvas,
 .vega-embed svg {
   background: transparent !important;
 }
+
+/* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 900px) {
   .split-row,
@@ -406,4 +279,77 @@ main {
   #market_cap_vs_growth {
     max-width: 100%;
   }
+}
+
+@media (max-width: 800px) {
+  .hero,
+  header {
+    padding: 42px 20px 30px;
+  }
+
+  .hero h1,
+  header h1 {
+    font-size: 42px;
+  }
+
+  .hero-subtitle,
+  header > p:not(.data-note) {
+    font-size: 17px;
+  }
+
+  main {
+    padding: 0 18px 54px;
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .section-number {
+    font-size: 16px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .global-chart {
+    padding-left: 0;
+  }
+
+  .feature-text-top {
+    max-width: 100%;
+  }
+}
+
+/* ---------- FOOTER / END PANEL ---------- */
+
+.page-footer {
+  max-width: 1120px;
+  margin: 20px auto 46px;
+  padding: 34px 32px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(16, 32, 51, 0.95), rgba(47, 143, 104, 0.85)),
+    var(--navy);
+  color: #fffdf8;
+  box-shadow: 0 18px 45px rgba(16, 32, 51, 0.12);
+}
+
+.page-footer p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.page-footer p:first-child {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #f2d39b;
 }
