@@ -18,172 +18,245 @@
 </head>
 
 <body>
-  <header>
+  <header class="hero">
+    <p class="eyebrow">FIT2179 Data Visualisation</p>
+
     <h1>Behind the ASX 200</h1>
 
-    <p>
-      How Australia’s share market performed against the world over the last year,
-      and which sectors and companies shaped its growth.
+    <p class="hero-subtitle">
+      The ASX 200 is an index that tracks 200 of the largest companies listed on the Australian Securities Exchange. 
+      An index works like a market snapshot: instead of looking at one company, it combines many companies to show how a broader part of the share market is moving.
+      This visualisation explores how the ASX 200 performed, what it is made of, and which sectors and companies had the biggest influence over the past year.
     </p>
 
-    <p class="data-note">
-        Data note: All market data was collected on 19 May 2026 at 6:15 PM. One-year returns therefore reflect the year leading up to that collection time.
-    </p>
+    <div class="hero-meta">
+      <p>
+        <strong>Data note:</strong> Market data was collected on 19 May 2026 at 6:15 PM.
+        One-year returns reflect the year leading up to that collection time.
+      </p>
+    </div>
   </header>
 
   <main>
-    <section class="chart-section">
-      <div class="chart-text">
-        <h2>1. Australia global market comparison</h2>
-
-        <p>
-          This world map compares one-year returns using country-based MSCI index tracking ETFs. Green countries recorded stronger returns, red countries recorded weaker returns, and blue-grey countries are not included in the dataset. The colour scale is capped at 80% to keep the comparison readable.
-        </p>
+    <!-- 01 GLOBAL COMPARISON -->
+    <section class="story-section">
+      <div class="section-heading">
+        <span class="section-number">01</span>
+        <h2>Global comparison</h2>
       </div>
-
-      <div id="global_index_performance" class="chart"></div>
     </section>
 
-    <section class="chart-section">
-      <div class="chart-text">
-        <h2>2. How did the ASX 200 move day by day?</h2>
+    <section class="global-row">
+      <div id="global_index_performance" class="chart global-chart"></div>
 
+      <div class="global-caption">
         <p>
-          This area chart shows the daily S&amp;P/ASX 200 index level over the past year.
-          The filled area highlights the overall movement of the index, making it easier to see
-          periods of growth, decline and recovery across the year.
+          This map compares 43 countries using their main share market index or an MSCI index tracking ETF.
+          Australia, represented by the ASX 200, ranked 28th out of 43 countries with a one-year return of 23.44%.
+          This places Australia just below Belgium and just above Ireland.
         </p>
       </div>
-
-      <div id="asx_daily_area" class="chart"></div>
-    </section>
-
-    <section class="chart-section">
-      <div class="chart-text">
-        <h2>2. How has the ASX 200 performed over the past years?</h2>
-
-        <p>
-          This chart shows the yearly capital returns of the ASX 200 from 2015 to 2025.
-        </p>
-      </div>
-
-      <div id="asx_previous_years" class="chart"></div>
-    </section>
-
-        <section class="chart-section">
-      <div class="chart-text">
-        <h2>3. Where are ASX 200 companies based?</h2>
-
-        <p>
-          This bubble map shows where ASX 200 companies are headquartered. Larger circles
-          represent states with more companies, while a separate bubble shows companies
-          headquartered outside Australia.
-        </p>
-      </div>
-
-      <div id="company_locations_map" class="chart"></div>
-    </section>
-
-    <section class="chart-section">
-      <div class="chart-text">
-        <h2>4. Which companies drive the ASX 200?</h2>
-
-        <p>
-          This treemap shows all ASX 200 companies grouped by sector. Rectangle size represents
-          market capitalisation, while colour shows one-year return. Green rectangles show growth,
-          red rectangles show loss, and larger rectangles represent higher-value companies.
-        </p>
-      </div>
-
-      <div id="company_treemap" class="chart"></div>
-    </section>
-    
-    <section class="chart-section">
-      <div class="chart-text">
-        <h2>5. Which sectors make up the ASX 200?</h2>
-
-        <p>
-          This chart shows the sector makeup of the ASX 200
-        </p>
-      </div>
-
-      <div id="sector_makeup" class="chart"></div>
-    </section>
-
-    <section class="chart-section">
-      <div class="chart-text">
-        <h2>6. Which ASX sectors grew the most?</h2>
-
-        <p>
-          This chart shows the spread of one-year company returns within each ASX 200 sector.
-          Five extreme values above 300% were removed from this view so the main sector patterns
-          are easier to compare. Four of the removed values were from Materials and one was from
-          Health Care.
-        </p>
-      </div>
-
-      <div id="sector_growth" class="chart"></div>
-    </section>
-
-    <section class="chart-section">
-      <div class="chart-text">
-        <h2>7. How concentrated is the ASX 200?</h2>
-
-        <p>
-          This chart ranks ASX 200 companies by market capitalisation and shows how quickly
-          the largest companies add up to a major share of the index’s total value. The chart
-          shows the top 50 companies for readability.
-        </p>
-      </div>
-
-      <div id="market_concentration" class="chart"></div>
     </section>
 
 
-    <section class="chart-section">
-      <div class="chart-text">
-        <h2>8. Does company size relate to one-year growth?</h2>
+    <!-- 02 ABOUT THE ASX 200 -->
+    <section class="story-section">
+      <div class="section-heading">
+        <span class="section-number">02</span>
+        <h2>About the ASX 200</h2>
+      </div>
+    </section>
+
+    <section class="split-row">
+      <div class="split-chart">
+        <div id="asx_previous_years" class="chart small-embed"></div>
+      </div>
+
+      <div class="split-text">
+        <h3>Recent yearly returns</h3>
 
         <p>
-          This scatter plot compares each ASX 200 company’s market capitalisation with its
-          one-year return. A logarithmic x-axis is used so both smaller and larger companies
-          can be compared more clearly. Five extreme values above 300% were removed from this
-          view for readability.
+          The yearly return chart gives historical context before focusing on the latest one-year period. It shows that the ASX 200 has mostly recorded positive annual returns, but the strength of those returns changes noticeably across years.
+        </p>
+
+        <p>
+          Comparing each year with the average line helps show whether a given year performed above or below the broader recent pattern.
+        </p>
+      </div>
+    </section>
+
+    <section class="split-row reverse">
+      <div class="split-text">
+        <h3>Sector makeup</h3>
+
+        <p>
+          The ASX 200 is not evenly distributed across sectors. Financials and Materials make up the largest share of total market capitalisation, meaning these sectors have a major influence on how the index moves.
+        </p>
+
+        <p>
+          This means the ASX 200 is not simply a balanced collection of 200 companies. Larger sectors can shape the overall result more strongly than smaller sectors.
         </p>
       </div>
 
-      <div id="market_cap_vs_growth" class="chart"></div>
+      <div class="split-chart">
+        <div id="sector_makeup" class="chart small-embed"></div>
+      </div>
     </section>
 
+    <section class="split-row">
+      <div class="split-chart">
+        <div id="company_locations_map" class="chart small-embed"></div>
+      </div>
 
-    <section class="chart-section">
-      <div class="chart-text">
-        <h2>9. Which sectors contributed most to ASX 200 growth?</h2>
+      <div class="split-text">
+        <h3>Company locations</h3>
 
         <p>
-          This lollipop chart estimates each sector’s contribution to ASX 200 growth by combining
-          company market capitalisation with one-year return. Positive values show sectors that
-          added value, while negative values show sectors that reduced overall market value.
+          ASX 200 company headquarters are concentrated in Australia’s major business centres, especially New South Wales and Victoria. This reflects the importance of Sydney and Melbourne as corporate and financial hubs.
+        </p>
+
+        <p>
+          Western Australia also has a visible presence, which is important given the role of mining and resources companies in the Australian market.
+        </p>
+      </div>
+    </section>
+
+    <section class="split-row reverse">
+      <div class="split-text">
+        <h3>Market concentration</h3>
+
+        <p>
+          The concentration chart shows how quickly the largest companies add up to a major share of the ASX 200’s total market value. This helps explain why the index can be strongly affected by a relatively small number of very large companies.
+        </p>
+
+        <p>
+          Even though the ASX 200 contains 200 companies, the largest companies carry much more weight than smaller companies. This makes the index top-heavy.
         </p>
       </div>
 
-      <div id="sector_contribution" class="chart"></div>
+      <div class="split-chart">
+        <div id="market_concentration" class="chart small-embed"></div>
+      </div>
     </section>
 
-    <section class="chart-section">
-      <div class="chart-text">
-        <h2>10. How did ASX sectors move over time?</h2>
+
+    <!-- 03 ONE-YEAR GROWTH -->
+    <section class="story-section">
+      <div class="section-heading">
+        <span class="section-number">03</span>
+        <h2>One-year growth</h2>
+      </div>
+    </section>
+
+    <section class="feature-chart-section">
+      <div class="feature-text feature-text-top">
+        <h3>Company-level growth</h3>
 
         <p>
-          This line chart compares daily ASX sector index movements over the past year.
-          Each sector starts from a similar base, making it easier to compare which sectors
-          rose, fell or stayed relatively stable over time.
+          The treemap combines company size and one-year return. Larger rectangles represent companies with higher market capitalisation, while colour shows whether each company gained or lost value over the year.
+        </p>
+
+        <p>
+          This helps show which companies had the greatest influence on the ASX 200. A company with strong percentage growth matters more to the index when it also has a large market value.
         </p>
       </div>
 
-      <div id="sector_daily_lines" class="chart"></div>
+      <div id="company_treemap" class="chart feature-chart"></div>
     </section>
 
+    <section class="split-row">
+      <div class="split-chart">
+        <div id="asx_daily_area" class="chart"></div>
+      </div>
+
+      <div class="split-text">
+        <h3>One-year index movement</h3>
+
+        <p>
+          The daily area chart shows how the ASX 200 moved across the year rather than only showing the final return. The index rose overall, but the path was uneven.
+        </p>
+
+        <p>
+          The labelled troughs show two sharp falls followed by recoveries. This highlights that the final one-year result was shaped by both growth periods and short-term market shocks.
+        </p>
+      </div>
+    </section>
+
+    <!-- 04 SECTOR GROWTH ANALYSIS -->
+    <section class="story-section">
+      <div class="section-heading">
+        <span class="section-number">04</span>
+        <h2>Sector growth analysis</h2>
+      </div>
+    </section>
+
+    <section class="feature-chart-section">
+      <div class="feature-text feature-text-top">
+        <h3>Sector movement over time</h3>
+
+        <p>
+          This chart compares monthly sector movements as percentage change from the start of the period. The ASX 200 benchmark is included so each sector can be compared against the broader market.
+        </p>
+
+        <p>
+          Materials and Energy showed strong gains during the year, while some sectors moved below the benchmark. This helps show that the ASX 200’s overall result was shaped by very different sector paths.
+        </p>
+      </div>
+
+      <div id="sector_daily_lines" class="chart feature-chart"></div>
+    </section>
+
+    <section class="split-row">
+      <div class="split-chart">
+        <div id="sector_contribution" class="chart"></div>
+      </div>
+
+      <div class="split-text">
+        <h3>Sector contribution to growth</h3>
+
+        <p>
+          The lollipop chart estimates each sector’s contribution to ASX 200 growth by combining sector market value with one-year return.
+        </p>
+
+        <p>
+          This is useful because a sector with moderate percentage growth can still add a large amount of value if it represents a major share of the index.
+        </p>
+      </div>
+    </section>
+
+    <section class="feature-chart-section">
+      <div class="feature-text feature-text-top">
+        <h3>Sector return spread</h3>
+
+        <p>
+          The boxplot compares the spread of one-year company returns within each ASX 200 sector. This shows whether returns were consistent across a sector or driven by a wider range of company outcomes.
+        </p>
+
+        <p>
+          Some sectors contain companies with very different return patterns, while others are more tightly grouped. This helps explain why sector averages alone can hide important variation.
+        </p>
+      </div>
+
+      <div id="sector_growth" class="chart feature-chart"></div>
+    </section>
+
+    <section class="split-row reverse">
+      <div class="split-text">
+        <h3>Company size and growth</h3>
+
+        <p>
+          This scatterplot compares company market capitalisation with one-year return. The logarithmic x-axis allows smaller and larger companies to be compared on the same chart.
+        </p>
+
+        <p>
+          Smaller companies show wider jumps and drops, while larger companies are more clustered. This suggests smaller companies may be more volatile, but larger companies usually have more influence on the index.
+        </p>
+      </div>
+
+      <div class="split-chart">
+        <div id="market_cap_vs_growth" class="chart"></div>
+      </div>
+    </section>
   </main>
 
   <script src="js/vega_embed.js"></script>

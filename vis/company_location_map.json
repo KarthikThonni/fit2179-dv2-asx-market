@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Bubble map of ASX 200 company head office locations by state.",
-  "width": 760,
-  "height": 520,
-  "background": "#fffdf8",
+  "width": 500,
+  "height": 360,
+  "background": "transparent",
   "projection": {
     "type": "mercator",
-    "center": [136, -27],
-    "scale": 650
+    "center": [137, -28],
+    "scale": 520
   },
   "layer": [
     {
@@ -67,13 +67,13 @@
           "type": "quantitative",
           "title": "Number of companies",
           "scale": {
-            "range": [500, 7000]
+            "range": [300, 4200]
           },
           "legend": {
             "title": "Number of companies",
             "orient": "right",
-            "labelFontSize": 11,
-            "titleFontSize": 12,
+            "labelFontSize": 9,
+            "titleFontSize": 10,
             "labelColor": "#243447",
             "titleColor": "#102033",
             "symbolStrokeColor": "#102033"

@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Scatter plot of ASX 200 company market capitalisation versus one-year return.",
-  "width": 760,
-  "height": 460,
+  "width": 450,
+  "height": 251,
+  "background": "transparent",
   "data": {
     "url": "data/asx200_companies.csv"
   },

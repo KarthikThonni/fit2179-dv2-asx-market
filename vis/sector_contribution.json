@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Lollipop chart showing estimated ASX 200 sector contribution to one-year growth.",
-  "width": 820,
-  "height": 420,
+  "width": 502,
+  "height": 251,
+  "background": "transparent",
   "data": {
     "url": "data/asx200_companies.csv"
   },

@@ -1,10 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "Treemap of ASX 200 companies grouped by sector, sized by market cap and coloured by one-year return.",
-  "width": 760,
+  "width": 800,
   "height": 500,
   "padding": 2,
   "autosize": "none",
+  "background": "transparent",
 
   "data": [
     {

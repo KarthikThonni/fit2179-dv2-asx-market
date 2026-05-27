@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "World map showing one-year stock market growth by country.",
-  "width": 680,
-  "height": 360,
-  "background": "#fffdf8",
+  "width": 820,
+  "height": 430,
+  "background": "transparent",
   "projection": {
     "type": "naturalEarth1"
   },
@@ -101,7 +101,7 @@
           "title": "One-year return",
           "scale": {
             "domain": [-0.2, 0, 0.2, 0.8],
-            "range": ["#d95f4a", "#fffdf8", "#bfe7cc", "#2f8f68"],
+            "range": ["#d95f4a", "#ead8bd", "#8fc9a8", "#2f8f68"],
             "clamp": true
           },
           "legend": {
@@ -139,16 +139,16 @@
       },
       "encoding": {
         "x": {
-          "value": 555
+          "value": 835
         },
         "x2": {
-          "value": 570
+          "value": 850
         },
         "y": {
-          "value": 300
+          "value": 270
         },
         "y2": {
-          "value": 315
+          "value": 285
         }
       }
     },
@@ -164,7 +164,7 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "dx": 18,
+        "dx": 8,
         "fontSize": 11,
         "font": "Inter",
         "fontWeight": "600",
@@ -172,10 +172,10 @@
       },
       "encoding": {
         "x": {
-          "value": 570
+          "value": 850
         },
         "y": {
-          "value": 307
+          "value": 278
         },
         "text": {
           "field": "label"

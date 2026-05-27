@@ -3,6 +3,7 @@
   "description": "Distribution of one-year returns for ASX 200 companies by sector, excluding extreme outliers for readability.",
   "width": 760,
   "height": 470,
+  "background": "transparent",
   "data": {
     "url": "data/asx200_companies.csv"
   },

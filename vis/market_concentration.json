@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "ASX 200 market concentration by company market capitalisation.",
-  "width": 760,
-  "height": 420,
+  "width": 502,
+  "height": 277,
+  "background": "transparent",
   "data": {
     "url": "data/asx200_companies.csv"
   },
@@ -118,7 +119,7 @@
         "strokeWidth": 3,
         "point": {
           "filled": true,
-          "size": 45,
+          "size": 30,
           "color": "#d95f4a",
           "stroke": "#fffdf8",
           "strokeWidth": 1

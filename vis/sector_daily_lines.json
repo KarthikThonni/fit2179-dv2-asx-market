@@ -3,6 +3,7 @@
   "description": "Monthly percentage change of ASX sectors and the ASX200 benchmark over time.",
   "width": 760,
   "height": 430,
+  "background": "transparent",
   "data": {
     "url": "data/asx_daily_returns.csv"
   },

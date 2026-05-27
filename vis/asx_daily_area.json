@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Daily S&P/ASX 200 index level over one year with two major drops labelled.",
-  "width": 760,
-  "height": 420,
+  "width": 600,
+  "height": 300,
+  "background": "transparent",
   "data": {
     "url": "data/asx_daily_returns.csv"
   },
@@ -36,7 +37,7 @@
           "stops": [
             {
               "offset": 0,
-              "color": "#fffdf8"
+              "color": "#f5efe6"
             },
             {
               "offset": 1,

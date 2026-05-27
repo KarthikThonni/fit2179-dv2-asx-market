@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "ASX 200 sector makeup by total market capitalisation.",
-  "width": 520,
-  "height": 420,
+  "width": 343,
+  "height": 277,
+  "background": "transparent",
   "data": {
     "url": "data/asx200_companies.csv"
   },
@@ -63,8 +64,8 @@
     {
       "mark": {
         "type": "arc",
-        "innerRadius": 80,
-        "outerRadius": 180,
+        "innerRadius": 53,
+        "outerRadius": 119,
         "stroke": "#fffdf8",
         "strokeWidth": 1.4
       },
@@ -155,7 +156,7 @@
       "mark": {
         "type": "text",
         "font": "Inter",
-        "fontSize": 16,
+        "fontSize": 14,
         "fontWeight": "bold",
         "align": "center",
         "baseline": "middle",
@@ -163,10 +164,10 @@
       },
       "encoding": {
         "x": {
-          "value": 260
+          "value": 172
         },
         "y": {
-          "value": 195
+          "value": 128
         },
         "text": {
           "value": "Total Mkt Cap"
@@ -182,7 +183,7 @@
       "mark": {
         "type": "text",
         "font": "Inter",
-        "fontSize": 18,
+        "fontSize": 16,
         "fontWeight": "bold",
         "align": "center",
         "baseline": "middle",
@@ -190,10 +191,10 @@
       },
       "encoding": {
         "x": {
-          "value": 260
+          "value": 172
         },
         "y": {
-          "value": 222
+          "value": 151
         },
         "text": {
           "field": "overallLabel",

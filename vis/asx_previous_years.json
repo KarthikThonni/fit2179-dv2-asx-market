@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "ASX 200 yearly capital returns from 2015 to 2025 with average return line.",
-  "width": 760,
-  "height": 380,
+  "width": 502,
+  "height": 251,
+  "background": "transparent",
   "data": {
     "url": "data/asx_yearly_returns.csv"
   },
