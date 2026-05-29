@@ -36,7 +36,7 @@
           "groupby": ["HeadOfficeState"]
         },
         {
-          "calculate": "datum.HeadOfficeState == 'WA' ? 115.86 : datum.HeadOfficeState == 'SA' ? 138.60 : datum.HeadOfficeState == 'QLD' ? 153.03 : datum.HeadOfficeState == 'NSW' ? 151.21 : datum.HeadOfficeState == 'VIC' ? 144.96 : datum.HeadOfficeState == 'Outside Australia' ? 160.5 : null",
+          "calculate": "datum.HeadOfficeState == 'WA' ? 115.86 : datum.HeadOfficeState == 'SA' ? 138.60 : datum.HeadOfficeState == 'QLD' ? 153.03 : datum.HeadOfficeState == 'NSW' ? 151.21 : datum.HeadOfficeState == 'VIC' ? 144.96 : datum.HeadOfficeState == 'Outside Australia' ? 157.8 : null",
           "as": "longitude"
         },
         {
@@ -116,7 +116,7 @@
           "groupby": ["HeadOfficeState"]
         },
         {
-          "calculate": "datum.HeadOfficeState == 'WA' ? 115.86 : datum.HeadOfficeState == 'SA' ? 138.60 : datum.HeadOfficeState == 'QLD' ? 153.03 : datum.HeadOfficeState == 'NSW' ? 157.00 : datum.HeadOfficeState == 'VIC' ? 144.96 : datum.HeadOfficeState == 'Outside Australia' ? 160.5 : null",
+          "calculate": "datum.HeadOfficeState == 'WA' ? 115.86 : datum.HeadOfficeState == 'SA' ? 138.60 : datum.HeadOfficeState == 'QLD' ? 153.03 : datum.HeadOfficeState == 'NSW' ? 157.00 : datum.HeadOfficeState == 'VIC' ? 144.96 : datum.HeadOfficeState == 'Outside Australia' ? 154.8 : null",
           "as": "labelLongitude"
         },
         {
@@ -127,7 +127,7 @@
           "filter": "datum.labelLongitude != null && datum.labelLatitude != null"
         },
         {
-          "calculate": "datum.HeadOfficeState + ' (' + datum.companyCount + ')'",
+          "calculate": "datum.HeadOfficeState == 'Outside Australia' ? 'Companies outside\\nAustralia (' + datum.companyCount + ')' : datum.HeadOfficeState + ' (' + datum.companyCount + ')'",
           "as": "label"
         }
       ],
@@ -138,6 +138,8 @@
         "fontWeight": "bold",
         "align": "center",
         "baseline": "middle",
+        "lineBreak": "\n",
+        "lineHeight": 13,
         "color": "#102033"
       },
       "encoding": {

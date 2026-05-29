@@ -30,6 +30,10 @@
       "as": ["Sector", "SectorIndex"]
     },
     {
+      "calculate": "datum.Sector == 'ASX200' ? 'ASX200 (dashed line)' : datum.Sector",
+      "as": "legendSector"
+    },
+    {
       "calculate": "toNumber(datum.SectorIndex)",
       "as": "sectorValue"
     },
@@ -134,30 +138,23 @@
   },
   "layer": [
     {
-      "transform": [
-        {
-          "filter": "datum.Sector != 'ASX200'"
-        }
-      ],
       "mark": {
         "type": "line",
         "point": {
           "filled": true,
           "size": 45,
-          "stroke": "#fffdf8",
+          "stroke": "#f5efe6",
           "strokeWidth": 0.8
-        },
-        "strokeWidth": 2,
-        "opacity": 0.82
+        }
       },
       "encoding": {
         "color": {
-          "field": "Sector",
+          "field": "legendSector",
           "type": "nominal",
           "title": "Series",
           "scale": {
             "domain": [
-              "ASX200",
+              "ASX200 (dashed line)",
               "Financials (XFJ)",
               "Materials (XMJ)",
               "Industrials (XNJ)",
@@ -175,8 +172,8 @@
               "#547aa5",
               "#d58a3a",
               "#d95f4a",
-              "#62a99b",
-              "#4f9a64",
+              "#2f8f8a",
+              "#6F7F8F",
               "#d6b44c",
               "#9c6b9e",
               "#e88b9a",
@@ -186,13 +183,72 @@
             ]
           },
           "legend": {
+            "title": "Series",
             "labelFontSize": 11,
             "titleFontSize": 12,
-            "symbolSize": 120,
+            "symbolSize": 180,
+            "symbolType": "stroke",
             "rowPadding": 5,
             "labelColor": "#243447",
             "titleColor": "#102033"
           }
+        },
+        "strokeDash": {
+          "condition": {
+            "test": "datum.Sector == 'ASX200'",
+            "value": [6, 4]
+          },
+          "value": [1, 0]
+        },
+        "strokeWidth": {
+          "condition": [
+            {
+              "test": "datum.Sector == 'ASX200'",
+              "value": 4
+            },
+            {
+              "test": "datum.Sector == 'Consumer Discretionary (XDJ)'",
+              "value": 3.6
+            }
+          ],
+          "value": 2.2
+        },
+        "opacity": {
+          "condition": [
+            {
+              "test": "datum.Sector == 'ASX200'",
+              "value": 1
+            },
+            {
+              "test": "datum.Sector == 'Consumer Discretionary (XDJ)'",
+              "value": 1
+            }
+          ],
+          "value": 0.74
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.Sector == 'Consumer Discretionary (XDJ)'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "point": {
+          "filled": true,
+          "size": 75,
+          "color": "#2f8f8a",
+          "stroke": "#f5efe6",
+          "strokeWidth": 1.2
+        },
+        "strokeWidth": 4.2,
+        "color": "#2f8f8a"
+      },
+      "encoding": {
+        "detail": {
+          "field": "Sector"
         }
       }
     },
@@ -204,16 +260,15 @@
       ],
       "mark": {
         "type": "line",
-        "point": {
-          "filled": true,
-          "size": 60,
-          "color": "#102033",
-          "stroke": "#fffdf8",
-          "strokeWidth": 1
-        },
+        "point": false,
         "strokeWidth": 4,
         "strokeDash": [6, 4],
         "color": "#102033"
+      },
+      "encoding": {
+        "detail": {
+          "field": "Sector"
+        }
       }
     }
   ],

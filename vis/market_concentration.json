@@ -133,7 +133,6 @@
         "y": {
           "field": "cumulativeShare",
           "type": "quantitative",
-          "title": "Cumulative share",
           "scale": {
             "domain": [0, 1]
           },
@@ -167,6 +166,47 @@
             "format": ".1%"
           }
         ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.companyRank == 50"
+        },
+        {
+          "calculate": "format(datum.cumulativeShare, '.1%') + ' of total ASX 200 value'",
+          "as": "cumulativeShareLabel"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": -12,
+        "dy": -10,
+        "font": "Inter",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#d95f4a"
+      },
+      "encoding": {
+        "x": {
+          "field": "companyRank",
+          "type": "ordinal"
+        },
+        "y": {
+            "field": "cumulativeShare",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [0, 1]
+            },
+            "axis": null
+          },
+        "text": {
+          "field": "cumulativeShareLabel",
+          "type": "nominal"
+        }
       }
     }
   ],
